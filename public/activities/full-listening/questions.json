@@ -1,0 +1,350 @@
+{
+  "activityName": "Full Listening",
+  "slug": "full-listening",
+  "sections": [
+    {
+      "id": 1,
+      "title": "Section 1",
+      "type": "composite",
+      "items": [
+        {
+          "kind": "mcq",
+          "qid": "q1",
+          "prompt": "1. sea view",
+          "options": [
+            "A \u2014 Royal Hotel",
+            "B \u2014 Star Hotel",
+            "C \u2014 Winchester Hotel",
+            "D \u2014 All three hotels"
+          ],
+          "answer": 1
+        },
+        {
+          "kind": "mcq",
+          "qid": "q2",
+          "prompt": "2. disabled access",
+          "options": [
+            "A \u2014 Royal Hotel",
+            "B \u2014 Star Hotel",
+            "C \u2014 Winchester Hotel",
+            "D \u2014 All three hotels"
+          ],
+          "answer": 3
+        },
+        {
+          "kind": "mcq",
+          "qid": "q3",
+          "prompt": "3. indoor play area",
+          "options": [
+            "A \u2014 Royal Hotel",
+            "B \u2014 Star Hotel",
+            "C \u2014 Winchester Hotel",
+            "D \u2014 All three hotels"
+          ],
+          "answer": 2
+        },
+        {
+          "kind": "mcq",
+          "qid": "q4",
+          "prompt": "4. choice of food",
+          "options": [
+            "A \u2014 Royal Hotel",
+            "B \u2014 Star Hotel",
+            "C \u2014 Winchester Hotel",
+            "D \u2014 All three hotels"
+          ],
+          "answer": 0
+        },
+        {
+          "kind": "mcq",
+          "qid": "q5",
+          "prompt": "5. private dining room",
+          "options": [
+            "A \u2014 Royal Hotel",
+            "B \u2014 Star Hotel",
+            "C \u2014 Winchester Hotel",
+            "D \u2014 All three hotels"
+          ],
+          "answer": 0
+        },
+        {
+          "kind": "mcq",
+          "qid": "q6",
+          "prompt": "6. group discount",
+          "options": [
+            "A \u2014 Royal Hotel",
+            "B \u2014 Star Hotel",
+            "C \u2014 Winchester Hotel",
+            "D \u2014 All three hotels"
+          ],
+          "answer": 1
+        },
+        {
+          "kind": "gap",
+          "qid": "q7",
+          "html": "Send a <input id=\"q7\" type=\"text\" /> to the Winchester Hotel",
+          "answerPattern": "^deposit$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q8",
+          "html": "Make the <input id=\"q8\" type=\"text\" />",
+          "answerPattern": "^invitations$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q9",
+          "html": "Find out who needs help with <input id=\"q9\" type=\"text\" />",
+          "answerPattern": "^transport$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q10",
+          "html": "Tell people not to bring any <input id=\"q10\" type=\"text\" />",
+          "answerPattern": "^presents$"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Section 2",
+      "type": "composite",
+      "items": [
+        {
+          "kind": "gap",
+          "qid": "q11",
+          "html": "The four players on the team are called the <input id=\"q11\" type=\"text\" />. the Second, the Third and the Skip.",
+          "answerPattern": "^lead$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q12",
+          "html": "The length of ice on which curling is played is called the <input id=\"q12\" type=\"text\" />.",
+          "answerPattern": "^sheet$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q13",
+          "html": "The target area is called the <input id=\"q13\" type=\"text\" />.",
+          "answerPattern": "^house$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q14",
+          "html": "Scottish brushes are usually made from <input id=\"q14\" type=\"text\" />.",
+          "answerPattern": "^horse\\ hair$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q15",
+          "html": "One shoe needs to have a sole made of <input id=\"q15\" type=\"text\" />.",
+          "answerPattern": "^rubber$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q16",
+          "html": "The captain of the team often carries a <input id=\"q16\" type=\"text\" />.",
+          "answerPattern": "^stopwatch$"
+        },
+        {
+          "kind": "mcq",
+          "qid": "q17",
+          "prompt": "Montreal Curling Club is famous as",
+          "options": [
+            "A. the champion club of the local league.",
+            "B. the oldest sports club in the region.",
+            "C. the most influential club in winter sports."
+          ],
+          "answer": 1
+        },
+        {
+          "kind": "mcq",
+          "qid": "q18",
+          "prompt": "The Caledonian Curling Club was formed in order to",
+          "options": [
+            "A. attract interest in the sport.",
+            "B. train young players.",
+            "C. fix regulations for the game."
+          ],
+          "answer": 2
+        },
+        {
+          "kind": "mcq",
+          "qid": "q19",
+          "prompt": "In the 16th century, curling avoided being banned because",
+          "options": [
+            "A. it was already so popular.",
+            "B. it was good training for battle.",
+            "C. it was only played by children."
+          ],
+          "answer": 1
+        },
+        {
+          "kind": "mcq",
+          "qid": "q20",
+          "prompt": "Early curling games in Canada used implements made of",
+          "options": [
+            "A. local material.",
+            "B. imported stone.",
+            "C. cast iron."
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Section 3",
+      "type": "composite",
+      "items": [
+        {
+          "kind": "mcq",
+          "qid": "q21",
+          "prompt": "What does Josh think about Jackson Pollock's paintings?",
+          "options": [
+            "A. They are easy to copy.",
+            "B. They are complex.",
+            "C. They are childish."
+          ],
+          "answer": 1
+        },
+        {
+          "kind": "mcq",
+          "qid": "q22",
+          "prompt": "The $5 painting was considered to be a fake because",
+          "options": [
+            "A. it lacked documentation.",
+            "B. it was too cheap.",
+            "C. it featured the wrong colours."
+          ],
+          "answer": 0
+        },
+        {
+          "kind": "mcq",
+          "qid": "q23",
+          "prompt": "What made the International Foundation for Art Research reject the $5 painting?",
+          "options": [
+            "A. what was on the back of the painting",
+            "B. the type of paint used",
+            "C. how the paint was applied"
+          ],
+          "answer": 1
+        },
+        {
+          "kind": "mcq",
+          "qid": "q24",
+          "prompt": "What do Josh and Emily agree about art evaluation?",
+          "options": [
+            "A. Only an experienced critic can evaluate a painting's authenticity.",
+            "B. Modern scientific methods have replaced the traditional approach.",
+            "C. Experts from the science and art worlds should work together."
+          ],
+          "answer": 2
+        },
+        {
+          "kind": "gap",
+          "qid": "q25",
+          "html": "Seracini used <strong>25</strong> <input id=\"q25\" type=\"text\" /> \u2026\u2026\u2026",
+          "answerPattern": "^D$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q26",
+          "html": "Seracini used <strong>26</strong> <input id=\"q26\" type=\"text\" /> \u2026\u2026\u2026",
+          "answerPattern": "^G$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q27",
+          "html": "Seracini guessed that Da Vinci painted his masterpiece on the east wall, in a space that used to hold <strong>27</strong> <input id=\"q27\" type=\"text\" /> \u2026\u2026\u2026",
+          "answerPattern": "^F$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q28",
+          "html": "Seracini analysed the wall using <strong>28</strong> <input id=\"q28\" type=\"text\" /> \u2026\u2026\u2026",
+          "answerPattern": "^E$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q29",
+          "html": "Seracini hypothesised that the Da Vinci painting is still there on the original <strong>29</strong> <input id=\"q29\" type=\"text\" /> \u2026\u2026\u2026",
+          "answerPattern": "^C$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q30",
+          "html": "Seracini is using <strong>30</strong> <input id=\"q30\" type=\"text\" /> \u2026\u2026\u2026",
+          "answerPattern": "^B$"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Section 4",
+      "type": "composite",
+      "items": [
+        {
+          "kind": "gap",
+          "qid": "q31",
+          "html": "Lecture aim: Analysis of the <strong>31</strong> <input id=\"q31\" type=\"text\" /> surrounding sustainability",
+          "answerPattern": "^confusion$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q32",
+          "html": "Sustainable development: Development that will meet the needs of both present and future <strong>32</strong> <input id=\"q32\" type=\"text\" />",
+          "answerPattern": "^generations$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q33",
+          "html": "Myth 1: No mention of the <strong>33</strong> <input id=\"q33\" type=\"text\" /> in original definition",
+          "answerPattern": "^environment$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q34",
+          "html": "Original focus: poorer nations should have the same <strong>34</strong> <input id=\"q34\" type=\"text\" /> to natural resources as richer nations",
+          "answerPattern": "^rights$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q35",
+          "html": "This would help them achieve better <strong>35</strong> <input id=\"q35\" type=\"text\" /> conditions",
+          "answerPattern": "^living$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q36",
+          "html": "\u2018Green\u2019 vs Sustainable \u2014 key problem is finding <strong>36</strong> <input id=\"q36\" type=\"text\" /> to develop technology",
+          "answerPattern": "^time$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q37",
+          "html": "Sustainability lobby is prepared to <strong>37</strong> <input id=\"q37\" type=\"text\" /> nuclear energy",
+          "answerPattern": "^accept$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q38",
+          "html": "Role of technology \u2014 battery stations on <strong>38</strong> <input id=\"q38\" type=\"text\" /> is business thinking, not new tech",
+          "answerPattern": "^roads$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q39",
+          "html": "Agriculture: some farmers plant crops like sunflowers which don\u2019t use much water, unlike <strong>39</strong> <input id=\"q39\" type=\"text\" />",
+          "answerPattern": "^corn$"
+        },
+        {
+          "kind": "gap",
+          "qid": "q40",
+          "html": "Greater use of water is a result of changes in our <strong>40</strong> <input id=\"q40\" type=\"text\" />",
+          "answerPattern": "^diet$"
+        }
+      ]
+    }
+  ]
+}
