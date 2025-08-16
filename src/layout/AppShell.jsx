@@ -22,16 +22,18 @@ const AppShell = ({ children }) => (
           </div>
         </div>
         <nav className="flex flex-col gap-1">
-          <SidebarLink to="/" icon={HomeIcon} label="Home" />
-          <SidebarLink to="/leaderboards" icon={Trophy} label="Leaderboards" />
+          <SidebarLink to="/" icon={HomeIcon} label="Home" />        
           <SidebarLink to="/sets" icon={ListChecks} label="Question Sets" />
           <SidebarLink to="/mock" icon={FileText} label="CD Mock" />
+          <SidebarLink to="/practice" icon={ListChecks} label="Practice" />
           <SidebarLink to="/typing" icon={Keyboard} label="Typing" />
+          <SidebarLink to="/leaderboards" icon={Trophy} label="Leaderboards" />
+          <SidebarLink  icon={FileText} label="Books" />
           <SidebarLink to="/profile" icon={User} label="Profile" />
           <SidebarLink to="/info" icon={InfoIcon} label="Info" />
           <SidebarLink to="/settings" icon={SettingsIcon} label="Settings" />
           <SidebarLink to="/logout" icon={LogOut} label="Logout" />
-                  <SidebarLink to="/practice" icon={ListChecks} label="Practice" />
+          
         </nav>
         <div className="mt-6 text-xs text-gray-500">
           <p>v3 • WCAG-friendly • 8pt spacing</p>
