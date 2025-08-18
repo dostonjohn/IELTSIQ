@@ -50,24 +50,12 @@ const TypingStreamBase = ({ target, typed, shake }) => {
     prevTypedRef.current = typed.length;
   }, [typed, target, baseSpans]);
 
-  const caretIndex = Math.min(typed.length, target.length);
-  let out;
-  if (caretIndex < target.length) {
-    out = [
-      ...spansRef.current.slice(0, caretIndex),
-      <span key={`caret-${caretIndex}`} className="whitespace-pre-wrap text-gray-400/80">
-        <Caret />
-        {target[caretIndex]}
-      </span>,
-      ...spansRef.current.slice(caretIndex + 1)
-    ];
-  } else {
-    out = [
-      ...spansRef.current.slice(0, target.length),
-      <span key="caret-end" className="whitespace-pre-wrap"><Caret /></span>,
-      ...spansRef.current.slice(target.length)
-    ];
-  }
+  const caretIndex = Math.min(typed.length, target.length)
+  const out = [
+    ...spansRef.current.slice(0, caretIndex),
+    <span key="caret" className="mr-[-1px]"><Caret /></span>,
+    ...spansRef.current.slice(caretIndex)
+  ]
 
   return (
     <div className={`rounded-2xl border border-gray-200 dark:border-white/10 bg-white/80 dark:bg-white/5 p-4 font-mono text-[15px] leading-7 selection:bg-indigo-200/60 dark:selection:bg-indigo-400/30 ${shake ? 'animate-shake' : ''}`}>
