@@ -20,8 +20,8 @@ const TypingStreamBase = ({ target, typed, shake }) => {
     prevTypedRef.current = 0;
   }, [baseSpans]);
 
-  // Update only the spans that correspond to newly typed characters
-  useEffect(() => {
+  // Synchronously update spans for newly typed characters
+  if (typed.length !== prevTypedRef.current) {
     const prevLen = prevTypedRef.current;
     if (typed.length < prevLen) {
       // Handle backspace by restoring original spans
@@ -48,16 +48,16 @@ const TypingStreamBase = ({ target, typed, shake }) => {
       }
     }
     prevTypedRef.current = typed.length;
-  }, [typed, target, baseSpans]);
+  }
 
-  const caretIndex = typed.length
+  const caretIndex = typed.length;
   const out = [
     ...spansRef.current.slice(0, caretIndex),
     <span key="caret" className="mr-[-1px]">
       <Caret className="animate-pulse" />
     </span>,
     ...spansRef.current.slice(caretIndex)
-  ]
+  ];
 
   return (
     <div className={`rounded-2xl border border-gray-200 dark:border-white/10 bg-white/80 dark:bg-white/5 p-4 font-mono text-[15px] leading-7 selection:bg-indigo-200/60 dark:selection:bg-indigo-400/30 ${shake ? 'animate-shake' : ''}`}>
