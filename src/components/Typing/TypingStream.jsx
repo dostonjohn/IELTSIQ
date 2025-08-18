@@ -50,7 +50,7 @@ const TypingStreamBase = ({ target, typed, shake }) => {
     prevTypedRef.current = typed.length;
   }, [typed, target, baseSpans]);
 
-  const caretIndex = Math.min(typed.length, target.length)
+  const caretIndex = typed.length
   const out = [
     ...spansRef.current.slice(0, caretIndex),
     <span key="caret" className="mr-[-1px]"><Caret /></span>,
