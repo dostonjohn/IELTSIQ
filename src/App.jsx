@@ -16,6 +16,7 @@ import PracticeHub from './pages/practice';
 import ListeningMenu from './pages/practice/listening';
 import ListeningTruly from './pages/practice/listening-truly';
 import ListeningContext from './pages/practice/listening-context';
+import ListeningAccents from './pages/practice/listening-accents';
 import PracticeReading from './pages/practice/reading';
 import PracticeWriting from './pages/practice/writing';
 import PracticeSpeaking from './pages/practice/speaking';
@@ -32,7 +33,7 @@ const App = () => (
       <Route path="/practice/listening" element={<ListeningMenu />} />
       <Route path="/practice/listening/truly" element={<ListeningTruly />} />
       <Route path="/practice/listening/context" element={<ListeningContext />} />
-      <Route path="/practice/listening/accents" element={<ComingSoon title="Listening Accents" />} />
+      <Route path="/practice/listening/accents" element={<ListeningAccents />} />
       <Route path="/practice/listening/speed" element={<ComingSoon title="Listening Speed" />} />
       <Route path="/practice/listening/multitasking" element={<ComingSoon title="Listening Multitasking" />} />
       <Route path="/practice/listening/spelling" element={<ComingSoon title="Listening Spelling" />} />
