@@ -24,6 +24,7 @@ const Typing = () => {
   const [locked, setLocked] = useState(false);
   const [shake, setShake] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [runKey, setRunKey] = useState(0);
 
   const typedRef = useRef("");
   const startedAtRef = useRef(null);
@@ -101,6 +102,7 @@ const Typing = () => {
     typedRef.current = "";
     setFinalStats(null);
     setTarget(buildPassage());
+    setRunKey(k => k + 1);
     setLocked(false);
     setShowModal(false);
     startedAtRef.current = null;
@@ -171,7 +173,7 @@ const Typing = () => {
       <div className="relative" onClick={focusInput}>
         <textarea ref={hiddenRef} value={typed} onChange={onType} className="absolute -top-[9999px] -left-[9999px] w-px h-px opacity-0" spellCheck={false} readOnly={isTimed && locked} />
         <div ref={boxRef} className="cursor-text" role="textbox" aria-label="Typing area">
-          <TypingStream target={target} typed={typed} shake={shake} />
+          <TypingStream key={runKey} target={target} typed={typed} shake={shake} />
         </div>
         <p className="mt-2 text-xs text-gray-500">Click the text to focus. Start typing to begin. Backspace is allowed.</p>
       </div>
