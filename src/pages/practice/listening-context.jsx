@@ -9,17 +9,20 @@ function normalize(s) {
 }
 
 function gradeKeywords(userInputs, answerGroups) {
-  const gold = new Set(answerGroups.flat().map(normalize));
-  const used = new Set();
-  let correctCount = 0;
+  const normalized = answerGroups.map((g) => g.map(normalize));
+  const used = new Array(answerGroups.length).fill(false);
   const perInputCorrect = userInputs.map((raw) => {
     const v = normalize(raw);
-    if (!v || used.has(v) || !gold.has(v)) return false;
-    used.add(v);
-    correctCount++;
-    return true;
+    if (!v) return false;
+    const idx = normalized.findIndex((group, i) => !used[i] && group.includes(v));
+    if (idx !== -1) {
+      used[idx] = true;
+      return true;
+    }
+    return false;
   });
-  const canonical = answerGroups.map((g)=>g[0]);
+  const correctCount = perInputCorrect.filter(Boolean).length;
+  const canonical = answerGroups.map((g) => g[0]);
   return { correctCount, perInputCorrect, canonical };
 }
 
@@ -177,7 +180,7 @@ export default function ListeningContext() {
                       {v || <em className="text-gray-500">—</em>}
                     </span>
                     {!result.keywords.perInputCorrect[i] && (
-                      <span className="text-gray-500"> (expected one of: {result.keywords.canonical.join(', ')})</span>
+                      <span className="text-gray-500"> (expected: {result.keywords.canonical[i]})</span>
                     )}
                   </li>
                 ))}

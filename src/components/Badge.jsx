@@ -1,5 +1,5 @@
-import React from 'react'
-import { Award } from 'lucide-react'
+import React from 'react';
+import { Award } from 'lucide-react';
 
 const Badge = ({ label, color = "#F59E0B", icon: Icon = Award }) => (
   <div className="flex items-center gap-3 rounded-2xl border border-gray-200 dark:border-white/10 p-3">
@@ -13,4 +13,4 @@ const Badge = ({ label, color = "#F59E0B", icon: Icon = Award }) => (
   </div>
 );
 
-export default Badge
+export default Badge;
