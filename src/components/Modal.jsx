@@ -4,6 +4,12 @@ import React, { useEffect, useRef } from 'react';
 export default function Modal({ open, title='Result', children, onClose }) {
   const dialogRef = useRef(null);
   const lastFocus = useRef(null);
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      e.stopPropagation();
+      onClose && onClose();
+    }
+  };
 
   useEffect(() => {
     if (open) {
@@ -28,6 +34,7 @@ export default function Modal({ open, title='Result', children, onClose }) {
         aria-label={title}
         tabIndex={-1}
         ref={dialogRef}
+        onKeyDown={handleKeyDown}
         className="relative max-w-2xl w-full rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-gray-900 p-4"
       >
         <div className="flex items-center justify-between gap-2 mb-2">

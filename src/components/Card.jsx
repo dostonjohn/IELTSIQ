@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Card = ({ title, action, children, className = "" }) => (
   <section
@@ -15,4 +15,4 @@ const Card = ({ title, action, children, className = "" }) => (
   </section>
 );
 
-export default Card
+export default Card;

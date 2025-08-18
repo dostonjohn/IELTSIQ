@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const HeatCell = ({ level = 0, tip }) => {
   const shades = [
@@ -36,4 +36,4 @@ const Heatmap = ({ data, startLabel = "", endLabel = "" }) => (
   </div>
 );
 
-export default Heatmap
+export default Heatmap;
