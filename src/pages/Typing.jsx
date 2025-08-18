@@ -30,6 +30,7 @@ const Typing = () => {
   const endAtRef = useRef(null);
   const rafIdRef = useRef(null);
   const lastStatsRef = useRef(null);
+  const scrollRafRef = useRef(null);
 
   const hiddenRef = useRef(null);
   const boxRef = useRef(null);
@@ -112,13 +113,31 @@ const Typing = () => {
     setTimeout(() => setShake(false), 300);
   };
 
+  const scrollIntoViewIfNeeded = () => {
+    const el = boxRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const viewHeight = window.innerHeight || document.documentElement.clientHeight;
+    if (rect.bottom > viewHeight || rect.top < 0) {
+      el.scrollIntoView({ block: "nearest" });
+    }
+  };
+
+  const scheduleScroll = () => {
+    if (scrollRafRef.current) return;
+    scrollRafRef.current = requestAnimationFrame(() => {
+      scrollRafRef.current = null;
+      scrollIntoViewIfNeeded();
+    });
+  };
+
   const onType = (e) => {
     const v = e.target.value;
     if (isTimed && locked) { nudge(); return; }
     if (!running && isTimed) { beginRun(); }
     setTyped(v);
     typedRef.current = v;
-    boxRef.current?.scrollIntoView({ block: "nearest" });
+    scheduleScroll();
   };
 
   const Chip = ({ id, label }) => {
