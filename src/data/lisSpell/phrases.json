@@ -1,0 +1,16 @@
+[
+  {
+    "id": "p1",
+    "audio": "/spelling/phrases/1.mp3",
+    "answers": [
+      "wide range of opportunities"
+    ]
+  },
+  {
+    "id": "p2",
+    "audio": "/spelling/phrases/2.mp3",
+    "answers": [
+      "in the meantime"
+    ]
+  }
+]

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Reading - Business Innovation (Passage 3)</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --button-bg: #006699;
+  --button-hover: #004466;
+  --progress-incomplete: #bdbdbd;
+  --progress-complete: #28a745;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+}
+header, footer {
+  background: #f8f8f8;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+main { display: flex; height: calc(100vh - 120px); overflow: hidden; }
+.passage-container, .questions-container {
+  width: 50%; padding: 20px; overflow-y: auto;
+}
+.passage-title {
+  font-size: 26px; font-weight: 700; margin-bottom: 16px;
+}
+.passage-text p {
+  margin-bottom: 14px; text-align: justify; line-height: 1.58;
+}
+.section-title {
+  font-size: 20px; font-weight: 700;
+  margin: 20px 0 10px; border-bottom: 2px solid #ccc;
+  padding-bottom: 5px; color: #444;
+}
+.instructions { font-style: italic; color: #555; margin-bottom: 10px; }
+.question {
+  margin-bottom: 16px; padding: 12px; border-left: 4px solid #eee;
+  background: #f9f9f9; border-radius: 8px;
+}
+.question-title { display: flex; align-items: flex-start; gap: 10px; font-size: 17px; font-weight: 500; }
+.question-number {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--progress-incomplete); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-top: 2px; flex-shrink: 0; font-size: 14px; font-weight: 700;
+}
+.question.answered .question-number { background: var(--progress-complete); }
+.options label, .match-select {
+  display: block; margin: 6px 0; font-size: 16px;
+}
+.match-select { width: 100%; padding: 6px; font-size: 16px; }
+.inline-input {
+  width: 200px;
+  border: none;
+  border-bottom: 2px solid #555;
+  background: transparent;
+  font-size: 15px;
+  padding: 2px 4px;
+  margin: 0 6px 0 3px;
+  color: inherit;
+  vertical-align: middle;
+}
+.inline-input:focus {
+  outline: none;
+  border-bottom: 2px solid #1e88e5;
+}
+.qbadge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--progress-incomplete); color: #fff;
+  font-size: 12px; font-weight: 700; margin: 0 6px 0 6px; vertical-align: middle;
+}
+.action-buttons { display: flex; gap: 12px; }
+button {
+  padding: 8px 16px; border: none; border-radius: 6px;
+  cursor: pointer; font-weight: 600; font-size: 15px;
+}
+.btn-primary { background: var(--button-bg); color: #fff; }
+.btn-primary:hover { background: var(--button-hover); }
+.btn-secondary {
+  background: transparent; border: 1px solid var(--button-bg);
+  color: var(--button-bg);
+}
+.btn-secondary:hover { background: rgba(0,102,153,0.1); }
+.progress-container {
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.progress-item {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--progress-incomplete); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-weight: bold;
+}
+.progress-item.completed { background: var(--progress-complete); }
+#feedback-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7); display: none;
+  justify-content: center; align-items: center;
+}
+.feedback-container {
+  background: #fff; width: 86%; max-width: 900px; padding: 20px;
+  border-radius: 12px; max-height: 90%; overflow: auto;
+}
+.feedback-item {
+  margin-bottom: 12px; background: #f9f9f9;
+  padding: 10px; border-radius: 8px;
+}
+.correct { color: var(--progress-complete); }
+.incorrect { color: #dc3545; }
+.highlight { background: yellow; color: black; outline: 1px solid rgba(0,0,0,0.2); }
+body.dark .highlight { background: #ffe082; color: #000; outline: 1px solid rgba(255,255,255,0.15); }
+/* Dark mode */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --button-bg: #1e88e5;
+  --button-hover: #1565c0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+body.dark header, body.dark footer { background: #1f1f1f; }
+body.dark .question { background: #1e1e1e; border-left-color: #333; }
+body.dark #feedback-body { color: white; }
+body.dark .feedback-item { background: #2a2a2a; }
+body.dark .inline-input { border-bottom: 2px solid #ccc; color: #fff; }
+body.dark .qbadge { background: var(--progress-complete); }
+
+#tg-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--button-bg);
+  border-radius: 6px; text-decoration: none;
+  color: var(--button-bg); font-weight: 600; margin-left: 10px;
+}
+#tg-link:hover { background: rgba(0,102,153,0.1); }
+body.dark #tg-link { border-color: var(--button-bg); color: var(--button-bg); }
+.small { font-size: 14px; color: #777; }
+</style>
+</head>
+<body class="dark">
+<header>
+  <div style="flex:1;"><strong>IELTS Reading Practice — Passage 3</strong></div>
+  <div class="timer-container" style="flex:1; justify-content:flex-end; display:flex; gap:8px; align-items:center;">
+    <i class="fas fa-clock"></i> <span id="timer">20:00</span>
+    <button id="start-timer" class="btn-secondary">Start</button>
+    <button id="pause-timer" class="btn-secondary">Pause</button>
+    <button id="reset-timer" class="btn-secondary">Reset</button>
+  </div>
+</header>
+<main>
+  <div class="passage-container">
+    <div class="passage-title">BUSINESS INNOVATION</div>
+    <div class="small">Reading Passage 3 — Questions 27–40</div>
+    <div class="passage-text" id="passage-text">
+      <p>As new ‘wonder products’ are getting harder and harder to find, what should companies do to survive in today’s ever more competitive markets?</p>
+      <p>The Oxford English Dictionary defines innovation as ‘making changes to something established’. Invention, by contrast, is the act of ‘coming upon or finding; discovery’. Revolutionary ‘inventions’ of 20th-century US firms include, for example, the safety razor, the hydraulic brake, and DNA fingerprinting. However, as Adrian Slywotsky of Mercer Management Consulting says, ‘In most industries, truly differentiating new-product breakthroughs are becoming increasingly rare’. And as ‘blockbuster’ novel products become steadily more elusive, big companies would do well to focus instead on making lots of small things better.</p>
+      <p>Unfortunately, big companies often have big problems with innovation. ‘Innovators try to change the status quo’, says Bhaskar Chakravorti of the Monitor Group, ‘which is why markets tend to resist them’. Innovations frequently disrupt the way companies do things (and may have been doing them for years). And it is not just markets that are nervous of innovation. Michael Hammer, co-author of ‘Re-engineering the Corporation’, cites the case of a PC-maker that set out to imitate Dell’s famous ‘Build to Order’ system of computer assembly. The company found its attempts were frustrated by both its head of manufacturing, who feared for his job, and its head of marketing, who did not want to upset his existing retail outlets. So the proposal got nowhere, and Dell continued to dominate the business.</p>
+      <p>Clayton Christensen, a Harvard Business School Professor, describes how disruptive innovations — simpler, cheaper and more convenient products that seriously upset the status quo — often herald the rapid downfall of thriving, long‑standing businesses. This, it is widely recognised, is because most such organisations are designed to grow through a series of sustaining innovations — the sort which simply improve on existing products for existing markets.</p>
+      <p>William Baumol, professor at New York University, argues that large companies have been learning important lessons from the history of innovation. Most have both cut back and redirected their Research and Development spending in recent years. Innovation by big companies is now based less on the discoveries of white‑coated scientists, and more on incremental improvements in the processes that constitute daily operations.</p>
+      <p>According to marketing specialist Vijay Vishwanath, companies also need to adjust to the ongoing fragmentation of markets. Once‑uniform mass markets are breaking up into countless ‘niches’, in which everything has to be customised for a small group of consumers. Looking for blockbusters in such a world is a daunting task. Another problem, according to Chakravorti, lies in the marketing of innovations. Too many executives are still stuck with the strategies used to sell Kodak’s first camera 120 years ago, when the product was so revolutionary that the company could forget about competition for at least a decade. Today, rival products can be rushed onto the market at speeds which would have been unimaginable in those days.</p>
+      <p>Companies that fail to come up with headline‑hitting new products should not despair. ‘There are plenty of other, albeit less glamorous, areas where innovation can take place’, says Erik Brynjolfsson of the MIT Sloan School of Management. He claims that the roots of the USA’s productivity surge originate in ‘a genuine revolution in how American companies are using information technology to reinvent their business processes from top to bottom’.</p>
+      <p>Hammer highlights several instances where firms have added considerably to their shareholder value through what he calls operational innovations — creativity in their business processes. Notable among these is the American retail giant Wal‑Mart. While superficially mundane, their pioneering idea of ‘cross‑docking’ — shifting merchandise off trucks from suppliers and straight onto trucks heading for stores — has been fundamental to the company’s ability to offer low prices, the platform for its outstanding success.</p>
+      <p>Companies are also being encouraged to embrace strategic innovations, following the example of such firms as Southwest Airlines, a low‑cost American regional carrier, whose creative strategies and shrewd timing won it a victory over its ailing competitor US Airways. The Swedish packaging company Tetra Pak also used this style of innovation, by moving away from delivering ready‑made containers for customers into providing machinery and supplying dedicated materials for them to make their own packaging. This strips out many costs from the process, and also makes it very difficult for the customer to switch suppliers. Like Southwest Airlines, they achieved success through strategic innovations alone, with little innovation in either the underlying technology or the product sold.</p>
+      <p>In his book ‘How to Grow When Markets Don’t’, Slywotsky and his co‑author Richard Wise recommend what they call demand innovations. A few far‑sighted organisations such as the French industrial gas company Air Liquide have found success not — as in the case of strategic innovations — by meeting existing demand in a new way, but by discovering new forms of demand and adapting to supply the products or services required. Air Liquide had been a leading supplier of industrial gases until the early 1990s, when gas became a commodity and their operational income plunged. Realising the value of the skills they had gained over the decades, the company became a supplier not only of gas, but also of the management services to accompany it. Within a short time their profits rose again.</p>
+      <p>There are certain things that managers can do to make innovations like these happen within their organisations. For example, projects with potential should be rapidly hived off into independent business units, away from the smothering influence of the status quo. The ultimate outcome of any one innovation may still be unpredictable; the process from which it emerges is not.</p>
+    </div>
+  </div>
+  <div class="questions-container">
+    <div class="section-title">Questions 27–31</div>
+    <div class="instructions">Do the following statements agree with the information given in Reading Passage 3?<br>
+    Write <strong>YES</strong> if the statement agrees with the writer, <strong>NO</strong> if it contradicts, <strong>NOT GIVEN</strong> if it is impossible to say.</div>
+    <div class="question-group">
+      <!-- 27-31: YES/NO/NOT GIVEN -->
+      <div class="question" id="q27"><div class="question-title"><div class="question-number">27</div><div class="question-text">In order to stay in the market, companies today need to concentrate their efforts on finding genuinely original products.</div></div>
+        <label><input type="radio" name="q27" value="YES"> YES</label>
+        <label><input type="radio" name="q27" value="NO"> NO</label>
+        <label><input type="radio" name="q27" value="NOT GIVEN"> NOT GIVEN</label>
+      </div>
+      <div class="question" id="q28"><div class="question-title"><div class="question-number">28</div><div class="question-text">Disruptive innovations often pose serious threats to even successful, well‑established companies.</div></div>
+        <label><input type="radio" name="q28" value="YES"> YES</label>
+        <label><input type="radio" name="q28" value="NO"> NO</label>
+        <label><input type="radio" name="q28" value="NOT GIVEN"> NOT GIVEN</label>
+      </div>
+      <div class="question" id="q29"><div class="question-title"><div class="question-number">29</div><div class="question-text">A key stage in the development of sustaining innovations involves research into the strengths and weaknesses of competitors’ products.</div></div>
+        <label><input type="radio" name="q29" value="YES"> YES</label>
+        <label><input type="radio" name="q29" value="NO"> NO</label>
+        <label><input type="radio" name="q29" value="NOT GIVEN"> NOT GIVEN</label>
+      </div>
+      <div class="question" id="q30"><div class="question-title"><div class="question-number">30</div><div class="question-text">Manufacturers today are able to compete with innovations over shorter time periods than in the past.</div></div>
+        <label><input type="radio" name="q30" value="YES"> YES</label>
+        <label><input type="radio" name="q30" value="NO"> NO</label>
+        <label><input type="radio" name="q30" value="NOT GIVEN"> NOT GIVEN</label>
+      </div>
+      <div class="question" id="q31"><div class="question-title"><div class="question-number">31</div><div class="question-text">It is hard to tell what the long‑term result of any innovation might be.</div></div>
+        <label><input type="radio" name="q31" value="YES"> YES</label>
+        <label><input type="radio" name="q31" value="NO"> NO</label>
+        <label><input type="radio" name="q31" value="NOT GIVEN"> NOT GIVEN</label>
+      </div>
+    </div>
+
+    <div class="section-title">Questions 32–35</div>
+    <div class="instructions">Look at the points (32–35) and the list of people. Match each point with the correct person (A–E).</div>
+    <div class="question-group">
+      <div class="question" id="q32"><div class="question-title"><div class="question-number">32</div><div class="question-text">The need for companies to cater for ever more specialised sets of customers.</div></div>
+        <select name="q32" class="match-select">
+          <option value="">-- Select --</option>
+          <option value="A">A Bhaskar Chakravorti</option>
+          <option value="B">B Michael Hammer</option>
+          <option value="C">C William Baumol</option>
+          <option value="D">D Vijay Vishwanath</option>
+          <option value="E">E Erik Brynjolfsson</option>
+        </select>
+      </div>
+      <div class="question" id="q33"><div class="question-title"><div class="question-number">33</div><div class="question-text">An explanation for the recent upward trend in the US economy.</div></div>
+        <select name="q33" class="match-select">
+          <option value="">-- Select --</option>
+          <option value="A">A Bhaskar Chakravorti</option>
+          <option value="B">B Michael Hammer</option>
+          <option value="C">C William Baumol</option>
+          <option value="D">D Vijay Vishwanath</option>
+          <option value="E">E Erik Brynjolfsson</option>
+        </select>
+      </div>
+      <div class="question" id="q34"><div class="question-title"><div class="question-number">34</div><div class="question-text">An example of company personnel who resisted innovation.</div></div>
+        <select name="q34" class="match-select">
+          <option value="">-- Select --</option>
+          <option value="A">A Bhaskar Chakravorti</option>
+          <option value="B">B Michael Hammer</option>
+          <option value="C">C William Baumol</option>
+          <option value="D">D Vijay Vishwanath</option>
+          <option value="E">E Erik Brynjolfsson</option>
+        </select>
+      </div>
+      <div class="question" id="q35"><div class="question-title"><div class="question-number">35</div><div class="question-text">A shift in the way many companies are organising their budgets.</div></div>
+        <select name="q35" class="match-select">
+          <option value="">-- Select --</option>
+          <option value="A">A Bhaskar Chakravorti</option>
+          <option value="B">B Michael Hammer</option>
+          <option value="C">C William Baumol</option>
+          <option value="D">D Vijay Vishwanath</option>
+          <option value="E">E Erik Brynjolfsson</option>
+        </select>
+      </div>
+    </div>
+
+    
+<div class="section-title">Questions 36–40</div>
+<div class="instructions">
+  Complete the table below. Choose <strong>NO MORE THAN TWO WORDS</strong> from the passage for each answer.
+</div>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align:left;">
+  <tr style="background:#f2f2f2;">
+    <th>Type of innovations</th>
+    <th>Definition</th>
+    <th>Example</th>
+    <th>Company</th>
+  </tr>
+  <tr>
+    <td>Operational innovations</td>
+    <td>Being innovative in the way existing business 
+      <span class="qbadge">36</span><input type="text" name="q36" class="inline-input">
+      are carried out.
+    </td>
+    <td>Moving goods by system known as 
+      <span class="qbadge">37</span><input type="text" name="q37" class="inline-input">
+    </td>
+    <td>Wal-Mart</td>
+  </tr>
+  <tr>
+    <td><span class="qbadge">38</span><input type="text" name="q38" class="inline-input"> innovations</td>
+    <td>Developing new approaches to meeting needs of existing markets</td>
+    <td>Giving customers means to manufacture products themselves</td>
+    <td>Tetra Pak</td>
+  </tr>
+  <tr>
+    <td><span class="qbadge">39</span><input type="text" name="q39" class="inline-input"></td>
+    <td>Identifying and meeting new types of customer needs</td>
+    <td>Offering customers 
+      <span class="qbadge">40</span><input type="text" name="q40" class="inline-input"> 
+      to go with the main products
+    </td>
+    <td>Air Liquide</td>
+  </tr>
+</table>
+
+</main>
+<footer>
+  <div class="progress-container" id="progress-container"></div>
+  <div class="action-buttons">
+    <button class="btn-secondary" id="reset-btn">Reset Answers</button>
+    <button class="btn-primary" id="submit-btn">Submit Answers</button>
+  </div>
+</footer>
+
+<div id="feedback-overlay">
+  <div class="feedback-container">
+    <h3>Your Results <span id="score-display">0/14</span></h3>
+    <div id="feedback-body"></div>
+    <button class="btn-primary" id="close-feedback">Close</button>
+  </div>
+</div>
+
+<script>
+// Timer
+let timerInterval;
+let seconds = 1200;
+let running = false;
+const timerDisplay = document.getElementById('timer');
+function formatTime(s) {
+  const m = Math.floor(s / 60).toString().padStart(2, '0');
+  const sec = (s % 60).toString().padStart(2, '0');
+  return m + ":" + sec;
+}
+function updateTimer() {
+  timerDisplay.textContent = formatTime(seconds);
+  if (seconds <= 0) {
+    clearInterval(timerInterval);
+    running = false;
+    document.getElementById('submit-btn').click();
+  }
+}
+document.getElementById('start-timer').addEventListener('click', () => {
+  if (!running) {
+    running = true;
+    timerInterval = setInterval(() => { seconds--; updateTimer(); }, 1000);
+  }
+});
+document.getElementById('pause-timer').addEventListener('click', () => { running = false; clearInterval(timerInterval); });
+document.getElementById('reset-timer').addEventListener('click', () => { running = false; clearInterval(timerInterval); seconds = 1200; updateTimer(); });
+
+// Close feedback
+document.getElementById('close-feedback').addEventListener('click', () => { document.getElementById('feedback-overlay').style.display = 'none'; });
+
+// Progress bubbles
+const totalQuestions = 14; // 27..40
+const progress = document.getElementById('progress-container');
+for (let i = 27; i <= 40; i++) {
+  const d = document.createElement('div');
+  d.className = 'progress-item';
+  d.textContent = i;
+  d.dataset.q = i;
+  d.addEventListener('click', () => {
+    const el = document.getElementById('q' + i);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+  progress.appendChild(d);
+}
+function markAnswered(qnum, answered) {
+  const bubble = [...document.querySelectorAll('.progress-item')].find(x => x.dataset.q == qnum);
+  if (bubble) bubble.classList.toggle('completed', answered);
+}
+function attachAnsweredListeners() {
+  // radios
+  for (let i = 27; i <= 31; i++) {
+    document.querySelectorAll('input[name="q' + i + '"]').forEach(r => {
+      r.addEventListener('change', () => markAnswered(i, true));
+    });
+  }
+  // selects 32-35
+  for (let i = 32; i <= 35; i++) {
+    const sel = document.querySelector('[name="q' + i + '"]');
+    if (sel) sel.addEventListener('change', () => markAnswered(i, !!sel.value));
+  }
+  // text 36-40
+  for (let i = 36; i <= 40; i++) {
+    const t = document.querySelector('[name="q' + i + '"]');
+    if (t) t.addEventListener('input', () => markAnswered(i, t.value.trim().length > 0));
+  }
+}
+attachAnsweredListeners();
+
+// Answers
+const answers = {
+  27: 'NO', 28: 'YES', 29: 'NOT GIVEN', 30: 'YES', 31: 'YES',
+  32: 'D', 33: 'E', 34: 'B', 35: 'C',
+  36: ['processes','process'], // allow singular
+  37: ['cross-docking','cross docking','crossdocking'],
+  38: ['strategic','strategic innovations'],
+  39: ['demand','demand innovations'],
+  40: ['management services','management service']
+};
+
+function normalize(s) {
+  return (s || '').toString().trim().toLowerCase().replace(/\s+/g,' ');
+}
+
+document.getElementById('submit-btn').addEventListener('click', () => {
+  let correct = 0;
+  const fb = document.getElementById('feedback-body');
+  fb.innerHTML = '';
+
+  function addFeedback(i, userAns, ok, correctAnsText) {
+    const item = document.createElement('div');
+    item.className = 'feedback-item';
+    item.innerHTML = `<strong>Q${i}:</strong> Your answer: <em>${userAns || 'Not answered'}</em> ` +
+      (ok ? '<span class="correct">✔</span>' : `<span class="incorrect">✘ (Correct: ${correctAnsText})</span>`);
+    fb.appendChild(item);
+    const qel = document.getElementById('q' + i);
+    if (qel) qel.style.borderLeftColor = ok ? 'var(--progress-complete)' : '#dc3545';
+  }
+
+  // 27-31 radios
+  for (let i = 27; i <= 31; i++) {
+    const checked = document.querySelector('input[name="q' + i + '"]:checked');
+    const val = checked ? checked.value : '';
+    const ok = val.toUpperCase() === answers[i];
+    if (ok) correct++;
+    addFeedback(i, val, ok, answers[i]);
+  }
+
+  // 32-35 selects
+  for (let i = 32; i <= 35; i++) {
+    const sel = document.querySelector('[name="q' + i + '"]');
+    const val = sel ? sel.value : '';
+    const ok = val.toUpperCase() === answers[i];
+    if (ok) correct++;
+    addFeedback(i, val, ok, answers[i]);
+  }
+
+  // 36-40 text
+  for (let i = 36; i <= 40; i++) {
+    const input = document.querySelector('[name="q' + i + '"]');
+    const valRaw = input ? input.value : '';
+    const val = normalize(valRaw);
+    const acceptable = answers[i];
+    let ok = false;
+    let corrShow = '';
+    if (Array.isArray(acceptable)) {
+      ok = acceptable.map(normalize).includes(val);
+      corrShow = acceptable[0];
+    } else {
+      ok = normalize(acceptable) === val;
+      corrShow = acceptable;
+    }
+    if (ok) correct++;
+    if (input) input.style.borderBottomColor = ok ? 'green' : '#dc3545';
+    addFeedback(i, valRaw, ok, corrShow);
+  }
+
+  document.getElementById('score-display').textContent = `${correct}/14`;
+  document.getElementById('feedback-overlay').style.display = 'flex';
+});
+
+document.getElementById('reset-btn').addEventListener('click', () => {
+  // reset inputs
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  document.querySelectorAll('select').forEach(s => s.value = '');
+  document.querySelectorAll('input[type="text"]').forEach(t => { t.value = ''; t.style.borderBottomColor = ''; });
+  // reset UI
+  document.querySelectorAll('.question').forEach(q => q.style.borderLeftColor = '#eee');
+  document.querySelectorAll('.progress-item').forEach(p => p.classList.remove('completed'));
+  document.getElementById('feedback-overlay').style.display = 'none';
+});
+
+// Global highlighter for the whole page (except form controls)
+(function () {
+  const BLOCK_TAGS = new Set(['INPUT','TEXTAREA','SELECT','OPTION','BUTTON']);
+  function isInsideBlocked(node) {
+    while (node) {
+      if (node.nodeType === 1) {
+        const tag = node.tagName;
+        if (BLOCK_TAGS.has(tag)) return true;
+        if (node.classList && node.classList.contains('highlight')) return true;
+      }
+      node = node.parentNode;
+    }
+    return false;
+  }
+  function highlightSelection() {
+    const sel = window.getSelection && window.getSelection();
+    if (!sel || sel.isCollapsed) return;
+    const range = sel.getRangeAt(0);
+    const { startContainer, endContainer } = range;
+    if (isInsideBlocked(startContainer) || isInsideBlocked(endContainer)) { sel.removeAllRanges(); return; }
+    try {
+      const text = sel.toString();
+      if (!text.trim()) return;
+      const wrapper = document.createElement('span');
+      wrapper.className = 'highlight';
+      const contents = range.extractContents();
+      wrapper.appendChild(contents);
+      range.insertNode(wrapper);
+    } catch (e) { } finally { sel.removeAllRanges(); }
+  }
+  document.addEventListener('mouseup', highlightSelection);
+  document.addEventListener('keydown', (ev) => {
+    if ((ev.key === 'h' || ev.key === 'H') && (ev.ctrlKey || ev.metaKey)) {
+      highlightSelection(); ev.preventDefault();
+    }
+  });
+})();
+</script>
+</body>
+</html>

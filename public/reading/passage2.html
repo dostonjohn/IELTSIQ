@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Reading - Children’s comprehension of television advertising</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --button-bg: #006699;
+  --button-hover: #004466;
+  --progress-incomplete: #bdbdbd;
+  --progress-complete: #28a745;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+}
+header, footer {
+  background: #f8f8f8;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+main { display: flex; height: calc(100vh - 120px); overflow: hidden; }
+.passage-container, .questions-container {
+  width: 50%; padding: 20px; overflow-y: auto;
+}
+.passage-title {
+  font-size: 26px; font-weight: 700; margin-bottom: 20px;
+}
+.passage-text p {
+  margin-bottom: 16px; text-align: justify; line-height: 1.6;
+}
+.section-title {
+  font-size: 20px; font-weight: 700;
+  margin: 20px 0 10px; border-bottom: 2px solid #ccc;
+  padding-bottom: 5px; color: #444;
+}
+.instructions { font-style: italic; color: #555; margin-bottom: 10px; }
+.question {
+  margin-bottom: 20px; padding: 12px; border-left: 4px solid #eee;
+  background: #f9f9f9; border-radius: 5px;
+}
+.question-title { display: flex; align-items: flex-start; font-size: 17px; font-weight: 500; }
+.question-number {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--progress-incomplete); color: #fff;
+  text-align: center; line-height: 28px; margin-right: 10px;
+  font-size: 14px; font-weight: bold;
+}
+.question.answered .question-number { background: var(--progress-complete); }
+.options label, .match-select {
+  display: block; margin: 5px 0; font-size: 16px;
+}
+.fill-in-the-blank {
+  border: none; border-bottom: 2px solid #333;
+  width: 200px; text-align: center; font-size: 16px;
+}
+.match-select { width: 100%; padding: 6px; font-size: 16px; }
+.action-buttons { display: flex; gap: 12px; }
+button {
+  padding: 8px 16px; border: none; border-radius: 4px;
+  cursor: pointer; font-weight: 600; font-size: 15px;
+}
+.btn-primary { background: var(--button-bg); color: #fff; }
+.btn-primary:hover { background: var(--button-hover); }
+.btn-secondary {
+  background: transparent; border: 1px solid var(--button-bg);
+  color: var(--button-bg);
+}
+.btn-secondary:hover { background: rgba(0,102,153,0.1); }
+.progress-container {
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.progress-item {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--progress-incomplete); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-weight: bold;
+}
+.progress-item.completed { background: var(--progress-complete); }
+#feedback-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7); display: none;
+  justify-content: center; align-items: center;
+}
+.feedback-container {
+  background: #fff; width: 80%; max-width: 800px; padding: 20px;
+  border-radius: 8px; max-height: 90%; overflow: auto;
+}
+.feedback-item {
+  margin-bottom: 15px; background: #f9f9f9;
+  padding: 10px; border-radius: 5px;
+}
+.correct { color: var(--progress-complete); }
+.incorrect { color: #dc3545; }
+.highlight { background: yellow; color: black; outline: 1px solid rgba(0,0,0,0.2); }
+body.dark .highlight { background: #ffe082; color: #000; outline: 1px solid rgba(255,255,255,0.15); }
+/* Dark mode */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --button-bg: #1e88e5;
+  --button-hover: #1565c0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+body.dark header, body.dark footer {
+  background: #1f1f1f;
+}
+body.dark .question {
+  background: #1e1e1e;
+  border-left-color: #333;
+}
+body.dark #feedback-body { color: white; }
+body.dark .feedback-item { background: #2a2a2a; }
+
+#tg-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--button-bg);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--button-bg);
+  font-weight: 600;
+  margin-left: 10px;
+}
+#tg-link:hover { background: rgba(0,102,153,0.1); }
+body.dark #tg-link { border-color: var(--button-bg); color: var(--button-bg); }
+.inline-input {
+  width: 160px;
+  border: none;
+  border-bottom: 2px solid #555;
+  background: transparent;
+  font-size: 15px;
+  padding: 2px 4px;
+  margin: 0 6px 0 3px;
+  color: inherit;
+  vertical-align: middle;
+}
+.inline-input:focus {
+  outline: none;
+  border-bottom: 2px solid #1e88e5;
+}
+body.dark .inline-input {
+  border-bottom: 2px solid #ccc;
+  color: #fff;
+}
+.qbadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--progress-incomplete);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 6px 0 6px;
+  vertical-align: middle;
+}
+body.dark .qbadge {
+  background: var(--progress-complete);
+}
+</style>
+</head>
+<body class="dark">
+<header>
+  <div style="flex:1;"><strong>IELTS Reading Practice 2</strong></div>
+  <div class="timer-container" style="flex:1; justify-content:flex-end; display:flex;">
+    <i class="fas fa-clock"></i> <span id="timer">20:00</span>
+    <button id="start-timer" class="btn-secondary">Start</button>
+    <button id="pause-timer" class="btn-secondary">Pause</button>
+    <button id="reset-timer" class="btn-secondary">Reset</button>
+  </div>
+</header>
+<main>
+  <div class="passage-container">
+    <div class="passage-title">Children’s comprehension of television advertising</div>
+    <div class="passage-text" id="passage-text">
+      <p><strong>Paragraph A</strong><br>
+        In 1874, long before the advent of television, the English Parliament passed a law to protect children ‘from their own lack of experience and from the wiles of pushing tradesmen and moneylenders’ (James, 1965). The act is one of the earliest governmental policies to address children’s vulnerability to commercial exploitation and was produced before major corporations earned huge profits by marketing products directly to children. Yet the issues underlying this 19th-century policy remain much the same in the 21st century
+      <p><strong>Paragraph B</strong><br>
+        Television has long been the predominant medium that advertisers have chosen for marketing products to children. It is estimated that the average child sees more than 40.000 television commercials a year, most of which are 15 to 30 seconds in length (Kunkel, 2001). According to another estimate, children aged 14 years and under make $24 billion in direct, purchases and influence $190 billion in family purchases, underscoring the high stakes involved (McNeal, 1987).
+      <p><strong>Paragraph C</strong><br>
+        A number of factors have contributed to an unprecedented growth in both the amount and type of advertising directed at children. First and foremost among these are changes in the media environment. In decades past, television programming targeted at children was limited and relegated to time slots unpopular with their parents, such as Saturday mornings of television advertising
+
+        (Turow, 1981). Today, the number of channels received in the average US home has escalated with the diffusion of cable television and satellite technologies. In this new multi-channel era, there are numerous national program services devoted exclusively to children. Naturally, these channels deliver significant amounts of child- oriented marketing messages. Although parent may be pleased that their youngsters can now watch children’s programming at any hour of the day, they may not recognize that such viewing opportunities entail much greater exposure to advertising than any previous generation of youth has experienced.
+      Approximately 80% of all advertising targeted at children falls within four product categories: toys, cereals, candies, and fast-food restaurants (Kunkel et al, 1992). Commercials are highly effective at employing specific features designed to attract children's attention. For example, they use the strategy of introducing unique sound effects and rapidly moving images (Greer et al, 1982). The other most common persuasive strategy employed in advertising to children is to associate product with playfulness and happiness, rather than to provide any actual product-related information (Kunkel et al, 1992). For example, a commercial featuring Ronald McDonald dancing, singing and smiling in McDonald's restaurants without any mention of the actual food products available reflects a playful or happy theme. This strategy is also found frequently with cereal ads, which often include cartoon characters to help children identify the product. In contrast, most commercials fail to mention even the major grain used in each cereal.</p>
+      <p><strong>Paragraph E</strong><br>
+        Another common feature of advertising to children is the use of product disclosures such as 'batteries not included’ or 'each part sold separately'. Studies make clear that young children do not comprehend the intended meaning of these disclaimers. For example, fewer than one in four kindergarten through second grade children could grasp the meaning of 'some assembly required' in a commercial. In contrast, the use of child-friendly language such as 'you have to put it together' more than doubled the proportion of children who understood the qualifying message (Liebert et al, 1977). The phrase 'part of a balanced breakfast’ is also a frequent disclosure included in most cereal ads to combat the concern that sugared cereal holds little nutritional value for children. Research shows that most children below age 7 years have no idea what the term ‘balanced breakfast’ means (Palmer & McDowell, 1981). Rather than informing young viewers about the importance of a nutritious breakfast, this common disclaimer actually leaves many children with the misimpression that cereal alone is sufficient for a meal. This pattern of employing creative terminology in advertising content so as to obscure certain information that might be unhelpful to the sponsor is a long-standing practice that often misleads the consumer (Geis, 1982).
+      <p><strong>Paragraph F</strong><br>
+        Very young children do not recognize that there are two fundamentally different categories of television content: programs and commercials. Most children below the age of 4 or 6 exhibit low awareness of the concept of commercials, frequently explaining them as if they were a scene in the program itself. Once this confusion diminishes, children first recognize the difference between programs and commercials based on either affective (‘commercials are funnier than TV programs') or perceptual (‘commercials are short and programs are long’) cues (Blatt et al, 1972).
+      <p><strong>Paragraph G</strong><br>
+        Although most children's programs indicate that a commercial break is coming (e.g. by saying 'We’ll be right back after these messages’), research reveals that these ‘separators' generally do not help children to recognize advertising content (Palmer & McDowell, 1979). This likely occurs because they are not perceptually distinct from the adjacent programming that surrounds them; in fact, many separators feature characters that appear in the same show that the commercial has just interrupted. When an ad includes one of the characters featured in a program, this is known as host-selling. This type of advertising makes the task of discriminating between program and commercial content particularly difficult for young children (Kunkel, 1988) and is thus restricted in the US by the Federal Communications Commission during children’s programs. </div>
+      <p><strong>Paragraph H</strong><br>
+        In sum, because young children lack the cognitive skills and abilities of older children and adults, they do not comprehend commercial messages in the same way as more mature audiences, and are therefore uniquely susceptible to advertising influence.
+    </div>
+  <div class="questions-container">
+    <div class="section-title">Questions 14–18</div>
+    <div class="instructions">Which paragraph contains the following information?</div>
+    <div class="question-group">
+      <div class="question" id="q14"><div class="question-title"><div class="question-number">14</div><div class="question-text"> a description of recent innovations in TV broadcasting</div></div><select name="q14"><option value="">--Select--</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+      <div class="question" id="q15"><div class="question-title"><div class="question-number">15</div><div class="question-text">a mention of the main goods and services advertised to children</div></div><select name="q15"><option value="">--Select--</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+      <div class="question" id="q16"><div class="question-title"><div class="question-number">16</div><div class="question-text">
+        a reference to a current limitation on television advertising aimed at children</div></div><select name="q16"><option value="">--Select--</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+      <div class="question" id="q17"><div class="question-title"><div class="question-number">17</div><div class="question-text">
+        two techniques used to encourage children to watch TV commercials</div></div><select name="q17"><option value="">--Select--</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+      <div class="question" id="q18"><div class="question-title"><div class="question-number">18</div><div class="question-text">a type of advertisement that may make children believe the opposite of what is true</div></div><select name="q18"><option value="">--Select--</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+    </div>
+
+    <div class="section-title">Questions 19–22</div>
+    <div class="instructions">Match each statement with the correct researcher.</div>
+    <div class="question-group">
+      <div class="question" id="q19"><div class="question-title"><div class="question-number">19</div><div class="question-text">Ads often aim to teach children that a brand is fun rather than telling them about what is being sold.</div></div><select name="q19">
+        <option value="">--Select--</option>
+        <option value="A">A Kunkel</option>
+        <option value="B">B Kunkel et al</option>
+        <option value="C">C McNeal</option>
+        <option value="D">D Turow</option>
+        <option value="E">E Greer et al</option>
+        <option value="F">F Liebert et al</option>
+        <option value="G">G Palmer &amp; McDowell</option>
+        <option value="H">H Geis</option>
+      </select></div>
+      <div class="question" id="q20"><div class="question-title"><div class="question-number">20</div><div class="question-text">Originally, children’s programmes were only broadcast when adults rarely watched TV.</div></div><select name="q20">
+        <option value="">--Select--</option>
+        <option value="A">A Kunkel</option>
+        <option value="B">B Kunkel et al</option>
+        <option value="C">C McNeal</option>
+        <option value="D">D Turow</option>
+        <option value="E">E Greer et al</option>
+        <option value="F">F Liebert et al</option>
+        <option value="G">G Palmer &amp; McDowell</option>
+        <option value="H">H Geis</option>
+      </select></div>
+      <div class="question" id="q21"><div class="question-title"><div class="question-number">21</div><div class="question-text">
+        Children have a significant impact on what adults buy.</div></div><select name="q21">
+          <option value="">--Select--</option>
+          <option value="A">A Kunkel</option>
+          <option value="B">B Kunkel et al</option>
+          <option value="C">C McNeal</option>
+          <option value="D">D Turow</option>
+          <option value="E">E Greer et al</option>
+          <option value="F">F Liebert et al</option>
+          <option value="G">G Palmer &amp; McDowell</option>
+          <option value="H">H Geis</option>
+      </select></div>
+      <div class="question" id="q22"><div class="question-title"><div class="question-number">22</div><div class="question-text">Tests showed that children can follow information if simple words are used.</div></div><select name="q22">
+        <option value="">--Select--</option>
+        <option value="A">A Kunkel</option>
+        <option value="B">B Kunkel et al</option>
+        <option value="C">C McNeal</option>
+        <option value="D">D Turow</option>
+        <option value="E">E Greer et al</option>
+        <option value="F">F Liebert et al</option>
+        <option value="G">G Palmer &amp; McDowell</option>
+        <option value="H">H Geis</option>
+      </select></div>
+    </div>
+
+    <div class="section-title">Questions 23–26</div>
+    <div class="instructions">
+      Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.
+    </div>
+
+    <p><strong>How very young children perceive commercials.</strong></p>
+
+    <p id="summary-inline">
+    Children below the age of 4 or 5 do not understand the difference between television programmes and commercials.  
+    In fact, these children often mistake an advertisement for a 
+    <span class="qbadge">23</span><input type="text" name="q23" id="q23" class="inline-input"> 
+    from the programme they are watching.  
+    This is despite the fact that children's TV programmes usually include announcements called 
+    <span class="qbadge">24</span><input type="text" name="q24" id="q24" class="inline-input"> 
+    to show that there is going to be a commercial break.  
+    The problem is made more difficult because of a technique called 
+    <span class="qbadge">25</span><input type="text" name="q25" id="q25" class="inline-input"> 
+    whereby a person or cartoon figure from the programme is used to sell a product during the commercial break.  
+    From the age of 4 or 5, children begin to realise that commercials are different from TV programmes: for example, they may then recognise that there is a difference in length of that advertisements are 
+    <span class="qbadge">26</span><input type="text" name="q26" id="q26" class="inline-input"> 
+    than actual TV.
+    </p>
+  </div>
+</main>
+<footer>
+  <div class="progress-container" id="progress-container"></div>
+  <div class="action-buttons">
+    <button class="btn-secondary" id="reset-btn">Reset Answers</button>
+    <button class="btn-primary" id="submit-btn">Submit Answers</button>
+  </div>
+</footer>
+<div id="feedback-overlay">
+  <div class="feedback-container">
+    <h3>Your Results <span id="score-display">0/13</span></h3>
+    <div id="feedback-body"></div>
+    <button class="btn-primary" id="close-feedback">Close</button>
+  </div>
+</div>
+<script>
+// Timer
+let timerInterval;
+let seconds = 1200;
+let running = false;
+const timerDisplay = document.getElementById('timer');
+function formatTime(s) {
+  const m = Math.floor(s / 60).toString().padStart(2, '0');
+  const sec = (s % 60).toString().padStart(2, '0');
+  return m + ":" + sec;
+}
+function updateTimer() {
+  timerDisplay.textContent = formatTime(seconds);
+  if (seconds <= 0) {
+    clearInterval(timerInterval);
+    running = false;
+    document.getElementById('submit-btn').click();
+  }
+}
+document.getElementById('start-timer').addEventListener('click', () => {
+  if (!running) {
+    running = true;
+    timerInterval = setInterval(() => {
+      seconds--;
+      updateTimer();
+    }, 1000);
+  }
+});
+document.getElementById('pause-timer').addEventListener('click', () => {
+  running = false; clearInterval(timerInterval);
+});
+document.getElementById('reset-timer').addEventListener('click', () => {
+  running = false; clearInterval(timerInterval);
+  seconds = 1200; updateTimer();
+});
+
+document.getElementById('close-feedback').addEventListener('click', () => {
+  document.getElementById('feedback-overlay').style.display = 'none';
+});
+
+// Answers (left as-is)
+const answers = {
+  14: 'C', 15: 'D', 16: 'G', 17: 'D', 18: 'E',
+  19: 'B', 20: 'D', 21: 'C', 22: 'F',
+  23: 'scene', 24: 'separators', 25: 'host-selling', 26: 'funnier'
+};
+
+document.getElementById('submit-btn').addEventListener('click', () => {
+  let correct = 0;
+  const fb = document.getElementById('feedback-body');
+  fb.innerHTML = '';
+  for (let i = 14; i <= 26; i++) {
+    const el = document.querySelector(`[name="q${i}"]`);
+    let userAns = el ? el.value.trim() : '';
+    const correctAns = answers[i];
+    const isCorrect = userAns.toUpperCase() === String(correctAns).toUpperCase();
+    if (isCorrect) {
+      correct++;
+      if (el) el.style.border = '2px solid green';
+    } else {
+      if (el) el.style.border = '2px solid red';
+    }
+    fb.innerHTML += `<div class="feedback-item"><strong>Q${i}:</strong> Your answer: ${userAns || 'Not answered'} ${isCorrect ? '<span class="correct">✔</span>' : '<span class="incorrect">✘ (Correct: ' + correctAns + ')</span>'}</div>`;
+  }
+  document.getElementById('score-display').textContent = `${correct}/13`
+  document.getElementById('feedback-overlay').style.display = 'flex';
+});
+
+document.getElementById('reset-btn').addEventListener('click', () => {
+  document.querySelectorAll('input, select').forEach(el => {
+    el.value = '';
+    el.style.border = '';
+  });
+  document.getElementById('feedback-overlay').style.display = 'none';
+});
+
+// Global highlighter for the whole page (except form controls)
+(function () {
+  const BLOCK_TAGS = new Set(['INPUT','TEXTAREA','SELECT','OPTION','BUTTON','TEXTAREA']);
+
+  function isInsideBlocked(node) {
+    while (node) {
+      if (node.nodeType === 1) {
+        const tag = node.tagName;
+        if (BLOCK_TAGS.has(tag)) return true;
+        if (node.classList && node.classList.contains('highlight')) return true;
+      }
+      node = node.parentNode;
+    }
+    return false;
+  }
+
+  function highlightSelection() {
+    const sel = window.getSelection && window.getSelection();
+    if (!sel || sel.isCollapsed) return;
+
+    const range = sel.getRangeAt(0);
+    const { startContainer, endContainer } = range;
+
+    if (isInsideBlocked(startContainer) || isInsideBlocked(endContainer)) {
+      sel.removeAllRanges();
+      return;
+    }
+
+    try {
+      const text = sel.toString();
+      if (!text.trim()) return;
+
+      const wrapper = document.createElement('span');
+      wrapper.className = 'highlight';
+
+      const contents = range.extractContents();
+      wrapper.appendChild(contents);
+      range.insertNode(wrapper);
+    } catch (e) {
+      // ignore
+    } finally {
+      sel.removeAllRanges();
+    }
+  }
+
+  document.addEventListener('mouseup', highlightSelection);
+  document.addEventListener('keydown', (ev) => {
+    if ((ev.key === 'h' || ev.key === 'H') && (ev.ctrlKey || ev.metaKey)) {
+      highlightSelection();
+      ev.preventDefault();
+    }
+  });
+})();
+</script>
+</body>
+</html>

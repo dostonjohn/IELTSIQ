@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+@keyframes shake{0%{transform:translateX(0)}25%{transform:translateX(-4px)}50%{transform:translateX(4px)}75%{transform:translateX(-2px)}100%{transform:translateX(0)}}
+.animate-shake{animation:shake .28s ease-in-out}
+.tooltip{position:relative}
+.tooltip[data-tip]:hover:after{content:attr(data-tip);position:absolute;left:50%;transform:translateX(-50%);bottom:calc(100% + 8px);white-space:nowrap;background:#111827;color:#fff;font-size:12px;padding:6px 8px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+
+/* Reading focus mode: hide sidebar, make container full width */
+.is-reading-full .max-w-\[1200px\] { max-width: 100% !important; }
+.is-reading-full aside { display: none !important; }
+.is-reading-full main { grid-column: 1 / -1 !important; }
+
+/* Listening focus layout — wider, centered, padded */
+.is-reading-full .listening-focus-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Taller main for roomy feel while focused */
+.is-reading-full main {
+  min-height: calc(100vh - 40px);
+}
+
+
+/* Brain lines overlay on sidebar card */
+.ieltsiq-sidebar {
+  position: relative;
+  overflow: hidden;
+}
+.ieltsiq-sidebar::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 96px;
+  height: 64px;
+  background-image: url('/brain-lines.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  pointer-events: none;
+  color: currentColor;
+}
+
+@keyframes floatUp { from { transform: translateY(4px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }

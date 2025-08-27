@@ -1,0 +1,235 @@
+{
+  "mode": "Reading Speed & Note",
+  "defaults": {
+    "textLength": 150,
+    "firstGlanceSeconds": 45,
+    "peekDuration": 10,
+    "peekLimit": 1,
+    "pinLimit": 3
+  },
+  "sets": [
+    {
+      "id": "sn-1",
+      "title": "City Bike Sharing",
+      "passage": "Over the last decade, city bike‑sharing schemes have moved from novelty to normal in many capitals. Stations placed near train hubs allow commuters to bridge the “last kilometer” faster than buses in rush hour. Operators price rides by the minute and use durable step‑through frames that survive weather and careless docking. A 2022 trial in Riverton found that new lanes and clear signage mattered more than the number of bicycles: trips rose 38 percent where lanes were added, even though fleet size stayed flat. Critics argue that helmets are rarely worn and that docks clutter sidewalks. Supporters point to quieter streets and small retail gains along cycling corridors. The program’s data still show big weekend spikes, suggesting leisure use is strong. Yet the city’s goal remains weekday relief for crowded transport, not tourist loops.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "question": "What is the passage mainly about?",
+          "options": [
+            "Why buses are faster than bicycles in cities",
+            "How pricing makes bike sharing profitable for operators",
+            "Factors that influence the success and impact of bike‑sharing schemes",
+            "A history of cycling clubs in Riverton"
+          ],
+          "answerIndex": 2,
+          "evidence": {
+            "text": "A 2022 trial in Riverton found that new lanes and clear signage mattered more than the number of bicycles"
+          }
+        },
+        {
+          "id": "q2",
+          "type": "tfng",
+          "statement": "The Riverton trial increased the fleet size during the study.",
+          "answer": "false",
+          "explain": "The passage says trips rose where lanes were added even though the fleet size stayed flat.",
+          "evidence": {
+            "text": "even though fleet size stayed flat"
+          }
+        },
+        {
+          "id": "q3",
+          "type": "short",
+          "prompt": "By what percentage did trips rise where lanes were added?",
+          "answers": [
+            "38 percent",
+            "38%",
+            "38"
+          ],
+          "evidence": {
+            "text": "trips rose 38 percent where lanes were added"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sn-2",
+      "title": "Pomodoro Timers in Class",
+      "passage": "The Pomodoro Technique asks learners to work in focused 25‑minute blocks separated by short breaks. In a semester‑long experiment at a community college, first‑year psychology students could opt in to a timer app that logged their sessions. Forty‑eight chose the app; forty‑five did not. At midterm, both groups scored similarly. By finals, however, app users submitted more complete outlines and reported fewer all‑nighters. Their average exam score was only three points higher, a small but consistent edge. The instructor noted that students who customized the length to 30 or 35 minutes tended to stick with the routine longer than those who kept the default. The study did not track distractions on phones, which the author admits could blur the results. Still, the pattern hints that schedules may help reduce cramming without massively changing grades.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "question": "What does the study mainly suggest about timer‑based study routines?",
+          "options": [
+            "They dramatically increase exam scores for most students.",
+            "They may support better habits and slightly higher performance.",
+            "They are only helpful for psychology majors.",
+            "They eliminate phone distractions."
+          ],
+          "answerIndex": 1,
+          "evidence": {
+            "text": "Their average exam score was only three points higher, a small but consistent edge."
+          }
+        },
+        {
+          "id": "q2",
+          "type": "tfng",
+          "statement": "At midterm, the app users significantly outscored the non‑users.",
+          "answer": "false",
+          "explain": "The passage says both groups scored similarly at midterm.",
+          "evidence": {
+            "text": "At midterm, both groups scored similarly."
+          }
+        },
+        {
+          "id": "q3",
+          "type": "short",
+          "prompt": "How many students chose to use the timer app?",
+          "answers": [
+            "48",
+            "forty‑eight",
+            "forty eight"
+          ],
+          "evidence": {
+            "text": "Forty‑eight chose the app"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sn-3",
+      "title": "Green Roofs and Urban Bees",
+      "passage": "Green roofs replace conventional shingles with shallow soil and hardy plants. Beyond cooling buildings, they can act as islands for urban bees. A survey across twelve rooftops in Brookfield recorded 19 bee species in one summer, including two ground‑nesting types that used cracks along parapets. Abundance was highest on roofs with flowering sedums that bloomed in staggered waves. The researchers expected nearby parks to predict bee diversity, but the better signal was pesticide‑free maintenance. One office tower switched to organic methods in May; by August, its bee counts had doubled compared with the previous year. The paper cautions that roofs with deep substrates may load structures beyond safe limits and should be engineered properly. It also warns that exotic ornamentals can outcompete the very plants bees prefer.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "question": "What is the main focus of the passage?",
+          "options": [
+            "How to engineer roof structures safely",
+            "Ways green roofs can support urban bee populations and what conditions matter",
+            "Reasons bees avoid urban areas entirely",
+            "The history of sedum cultivation in cities"
+          ],
+          "answerIndex": 1,
+          "evidence": {
+            "text": "they can act as islands for urban bees"
+          }
+        },
+        {
+          "id": "q2",
+          "type": "tfng",
+          "statement": "Bee diversity was best predicted by the proximity of parks.",
+          "answer": "false",
+          "explain": "The passage says pesticide‑free maintenance was the better signal than nearby parks.",
+          "evidence": {
+            "text": "the better signal was pesticide‑free maintenance"
+          }
+        },
+        {
+          "id": "q3",
+          "type": "short",
+          "prompt": "How many bee species were recorded in the survey?",
+          "answers": [
+            "19",
+            "nineteen"
+          ],
+          "evidence": {
+            "text": "recorded 19 bee species in one summer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sn-4",
+      "title": "The Resale of Clothing",
+      "passage": "Second‑hand clothing once signaled thrift or charity. Today, curated resale apps make used garments feel like limited releases. Sellers photograph items against plain backdrops, tag sizes consistently, and ship with prepaid labels. The biggest surprise is speed: some brands sell within hours when listings include exact measurements. A study of 5,000 transactions on the Loopwear platform found that jackets with repair notes, such as “zipper replaced in 2023,” earned higher trust and fetched 12 percent more. Environmental claims drive many clicks, but buyers still filter first by price and condition. Brick‑and‑mortar thrift stores, meanwhile, report fewer donations of premium labels, as owners try earning cash online. Critics say the trend may simply shuffle closets rather than reduce overall consumption.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "question": "What is the passage mainly about?",
+          "options": [
+            "Why thrift stores are closing rapidly",
+            "How curated resale platforms are changing second‑hand clothing",
+            "How to repair zippers on jackets",
+            "A history of clothing sizes"
+          ],
+          "answerIndex": 1,
+          "evidence": {
+            "text": "curated resale apps make used garments feel like limited releases"
+          }
+        },
+        {
+          "id": "q2",
+          "type": "tfng",
+          "statement": "Listings with precise measurements tend to sell faster.",
+          "answer": "true",
+          "explain": "The passage says some brands sell within hours when listings include exact measurements.",
+          "evidence": {
+            "text": "sell within hours when listings include exact measurements"
+          }
+        },
+        {
+          "id": "q3",
+          "type": "short",
+          "prompt": "How much more did jackets with repair notes fetch, according to the Loopwear study?",
+          "answers": [
+            "12 percent",
+            "12%",
+            "12"
+          ],
+          "evidence": {
+            "text": "fetched 12 percent more"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sn-5",
+      "title": "Audio Guides vs Human Guides",
+      "passage": "Museums once treated audio guides as an optional rental. As phone‑based tours grew cheaper, many institutions made them free with entry. The pitch is convenience: narrations sync to room beacons and visitors choose depth on each stop. A pilot at Westbridge Museum compared phone tours with small‑group human guides. Both groups spent about forty minutes in the galleries, but guided visitors asked more questions and lingered longer at two sculptures. Survey comments show a split: introverts praised the private pace of audio, while families favored a person who could adapt to children. Westbridge kept both options, shifting its docents to weekends. The museum notes that phone tours lower staffing costs, yet warns that poor earbuds and battery anxiety can ruin the experience for travelers.",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "question": "What is the passage mainly comparing?",
+          "options": [
+            "Museum gift shops and ticket prices",
+            "Audio tours and human‑led tours, including their trade‑offs",
+            "The history of beacons in galleries",
+            "Why families avoid museums"
+          ],
+          "answerIndex": 1,
+          "evidence": {
+            "text": "A pilot at Westbridge Museum compared phone tours with small‑group human guides."
+          }
+        },
+        {
+          "id": "q2",
+          "type": "tfng",
+          "statement": "Guided visitors rushed through the galleries in less time than audio users.",
+          "answer": "false",
+          "explain": "The passage says both groups spent about forty minutes; guided visitors actually lingered longer at two sculptures.",
+          "evidence": {
+            "text": "Both groups spent about forty minutes in the galleries, but guided visitors asked more questions and lingered longer at two sculptures."
+          }
+        },
+        {
+          "id": "q3",
+          "type": "short",
+          "prompt": "On which days did Westbridge focus its docents after the pilot?",
+          "answers": [
+            "weekends",
+            "on weekends"
+          ],
+          "evidence": {
+            "text": "Westbridge kept both options, shifting its docents to weekends."
+          }
+        }
+      ]
+    }
+  ]
+}

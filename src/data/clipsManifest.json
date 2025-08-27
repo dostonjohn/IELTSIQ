@@ -1,0 +1,87 @@
+[
+  {
+    "id": "short-001",
+    "url": "https://youtube.com/shorts/frEtJaGpGWw?si=9zYjexEYklm_OAKP",
+    "start": 0,
+    "end": null,
+    "watchThreshold": 0.7,
+    "task": {
+      "type": "gap",
+      "prompt": "Complete the phrase shouted in the clip: “_____ Thanos!!!”",
+      "answers": [
+        "bring me"
+      ]
+    },
+    "explanation": "The character yells “Bring me Thanos!”"
+  },
+  {
+    "id": "short-002",
+    "url": "https://youtube.com/shorts/WtbVDIQ3Wmo?si=x2HR2r3We2WA7YpI",
+    "start": 0,
+    "end": null,
+    "watchThreshold": 0.7,
+    "task": {
+      "type": "mcq",
+      "prompt": "Where is he (Khabib) going to?",
+      "options": [
+        "Moscow",
+        "Ireland",
+        "Anywhere",
+        "New York"
+      ],
+      "answerIndex": 2
+    },
+    "explanation": "He says he can go anywhere."
+  },
+  {
+    "id": "short-003",
+    "url": "https://youtube.com/shorts/0FCxqk7Krbs?si=8ujydyrjoRKL4J4v",
+    "start": 0,
+    "end": null,
+    "watchThreshold": 0.7,
+    "task": {
+      "type": "mcq",
+      "prompt": "What question did the girl (Rose) ask when he brought the axe?",
+      "options": [
+        "Will this walk?",
+        "Wheel this work?",
+        "Would this word?",
+        "Will this work?"
+      ],
+      "answerIndex": 3
+    },
+    "explanation": "She asks “Will this work?”"
+  },
+  {
+    "id": "short-004",
+    "url": "https://youtube.com/shorts/IQxea9UB1nQ?si=jEPRZY5gKMRsl9Ki",
+    "start": 0,
+    "end": null,
+    "watchThreshold": 0.7,
+    "task": {
+      "type": "mcq",
+      "prompt": "The man (MrBeast) said the last car was made before any other Ferrari in terms of doors.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answerIndex": 0
+    },
+    "explanation": "He implies it’s the earliest in that specific 'doors' sense."
+  },
+  {
+    "id": "short-005",
+    "url": "https://youtube.com/shorts/iMRBf_I6obo?si=L42NIh66wswx5He3",
+    "start": 0,
+    "end": null,
+    "watchThreshold": 0.7,
+    "task": {
+      "type": "gap",
+      "prompt": "Write the grammatically wrong word used in the speech:",
+      "answers": [
+        "someones"
+      ]
+    },
+    "explanation": "He says “someones,” which should be “someone’s.”"
+  }
+]

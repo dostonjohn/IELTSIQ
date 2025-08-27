@@ -1,0 +1,16 @@
+[
+  {
+    "id": "s1",
+    "audio": "/spelling/sentences/1.mp3",
+    "answers": [
+      "the meeting starts at ten pm"
+    ]
+  },
+  {
+    "id": "s2",
+    "audio": "/spelling/sentences/2.mp3",
+    "answers": [
+      "students should register online"
+    ]
+  }
+]

@@ -1,0 +1,115 @@
+import React from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
+
+import AppShell from './layout/AppShell'
+
+import Home from './pages/Home'
+import Info from './pages/Info'
+import Leaderboards from './pages/Leaderboards'
+import Sets from './pages/Sets'
+import SetPage from './pages/SetPage'
+import Typing from './pages/Typing'
+import Profile from './pages/Profile'
+import Settings from './pages/Settings'
+import Mock from './pages/Mock'
+import Logout from './pages/Logout'
+import Notes from './pages/Notes'
+
+import { isValidTo, wpmFrom, countCorrectChars } from './utils'
+
+// Practice hub + listening modes
+// Reading modes
+import ReadingMenu from './pages/practice/reading'
+import ReadingTrulyIndex from './pages/practice/reading-truly'
+import TrulyTopic from './pages/practice/reading/TrulyTopic'
+import TrulyArticle from './pages/practice/reading/TrulyArticle'
+import PracticeHub from './pages/practice'
+import ListeningMenu from './pages/practice/listening'
+import ListeningTruly from './pages/practice/listening-truly'
+import ListeningContext from './pages/practice/listening-context'
+import ListeningAccents from './pages/practice/listening-accents'
+import ListeningSpeed from './pages/practice/listening-speed'
+import ListeningMultitasking from './pages/practice/listening-multitasking'
+import ListeningMultitaskingSet from './pages/practice/listening-multitasking-set'
+import ListeningEnvironmentIndex from './pages/practice/listening-environment'
+import ListeningEnvironmentSet from './pages/practice/listening-environment-set'
+
+// Listening spelling
+import ListeningSpelling from './pages/practice/listening-spelling'
+import ListeningSpellingWord from './pages/practice/listening-spelling-word'
+import ListeningSpellingBank from './pages/practice/listening-spelling-bank'
+
+// Misc pages
+import Books from './pages/Books'
+import Clips from './pages/Clips'
+
+// NEW: Listening Paraphrasing
+import ParaphraseIndex from './pages/practice/listening/ParaphraseIndex'
+import ParaphraseSet from './pages/practice/listening/ParaphraseSet'
+
+const App = () => (
+  <AppShell>
+    <Routes>
+      {/* Practice */}
+      <Route path="/practice" element={<PracticeHub />} />
+      <Route path="/practice/listening" element={<ListeningMenu />} />
+      <Route path="/practice/listening/truly" element={<ListeningTruly />} />
+      <Route path="/practice/listening/context" element={<ListeningContext />} />
+      <Route path="/practice/listening/accents" element={<ListeningAccents />} />
+      <Route path="/practice/listening/speed" element={<ListeningSpeed />} />
+      <Route path="/practice/listening/multitasking" element={<ListeningMultitasking />} />
+      <Route path="/practice/listening/multitasking/set/:setId" element={<ListeningMultitaskingSet />} />
+      <Route path="/practice/listening/environment" element={<ListeningEnvironmentIndex />} />
+      <Route path="/practice/listening/environment/:setId" element={<ListeningEnvironmentSet />} />
+
+      {/* Listening: Spelling */}
+      <Route path="/practice/listening/spelling" element={<ListeningSpelling />} />
+      <Route path="/practice/listening/spelling/word" element={<ListeningSpellingWord />} />
+      <Route path="/practice/listening/spelling/:bank" element={<ListeningSpellingBank />} />
+
+      {/* Listening: Paraphrasing (new) */}
+      <Route path="/practice/listening/paraphrase" element={<ParaphraseIndex />} />
+      <Route path="/practice/listening/paraphrase/:setId" element={<ParaphraseSet />} />
+
+      {/* Misc */}
+      <Route path="/clips" element={<Clips />} />
+      <Route path="/books" element={<Books />} />
+
+      {/* Core pages */}
+      <Route path="/" element={<Home />} />
+      <Route path="/info" element={<Info />} />
+      <Route path="/leaderboards" element={<Leaderboards />} />
+      <Route path="/mock" element={<Mock />} />
+      <Route path="/sets" element={<Sets />} />
+      <Route path="/sets/:slug" element={<SetPage />} />
+      <Route path="/typing" element={<Typing />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/notes" element={<Notes />} />
+      <Route path="/settings" element={<Settings />} />
+      <Route path="/logout" element={<Logout />} />
+
+      {/* Fallback */}
+
+      {/* Reading */}
+      <Route path="/practice/reading" element={<ReadingMenu />} />
+      <Route path="/practice/reading/truly" element={<ReadingTrulyIndex />} />
+      <Route path="/practice/reading/truly/:topicId" element={<TrulyTopic />} />
+      <Route path="/practice/reading/truly/:topicId/:articleIdx" element={<TrulyArticle />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  </AppShell>
+)
+
+// Dev sanity checks
+if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV !== 'production') {
+  console.assert(isValidTo('/mock') === true, "isValidTo should accept '/mock'")
+  console.assert(isValidTo('') === false, "isValidTo should reject empty string")
+  const w1 = wpmFrom(250, 60000); console.assert(w1 === 50, `Expected 50 WPM, got ${w1}`)
+  const _target = 'abcdeabcde'
+  const _typed = 'abcdeXXXXX'
+  const correct = countCorrectChars(_target, _typed)
+  const w2 = wpmFrom(correct, 60000)
+  console.assert(correct === 5 && w2 === 1, `Expected correct=5 & WPM=1, got correct=${correct}, WPM=${w2}`)
+}
+
+export default App

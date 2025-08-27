@@ -1,0 +1,806 @@
+{
+  "mode": "Reading Truly",
+  "version": "v1",
+  "topics": [
+    {
+      "id": "technology",
+      "title": "Technology & AI",
+      "subtitle": "Quiet breakthroughs that actually change daily life",
+      "articles": [
+        {
+          "id": "technology-1",
+          "title": "Tiny Models, Big Impact: Edge AI in Daily Life",
+          "images": [
+            "https://cdn.prod.website-files.com/66e3ffddf1c6e55cc8c157f6/670e5e92ce2d9772473f1cff_655b5f1b09f2238e3ed1f873_10-best-ai-startup-ideas.png",
+            "https://media.istockphoto.com/id/1406674466/photo/big-data-connection-technology-concept.jpg?s=612x612&w=0&k=20&c=OPoKST8TVjklrGs89VnPDduGvp9zwiMXnavSruKMLyI=",
+            "https://edure.in/wp-content/uploads/2025/02/ai-tools.webp"
+          ],
+          "approxWords": 300,
+          "content": "Modern AI doesn’t just live in shiny data centers. It’s in doorbells deciding when to ping you, earbuds suppressing street noise, and cameras that sharpen photos before you tap save. This is edge AI: models running on the device itself, not a distant server. The magic isn’t only speed. It’s privacy, reliability, and power savings bundled together.\n\nWhen a doorbell detects motion locally, it sends fewer false alerts and avoids streaming every leaf wobble to the cloud. Translate that pattern everywhere: on‑device keyboards predict your next word without uploading your sentences; fitness watches classify workouts without sharing your heartbeat; cars spot lanes even with zero signal. Because the model is nearby, latency shrinks and the experience feels immediate.\n\nEdge AI isn’t trivial. Phones and embedded boards have strict budgets for memory, battery, and heat. Engineers shrink networks through pruning and quantization, trimming parameters the way chefs reduce a sauce. The result isn’t a research trophy. It’s something ordinary people touch 100 times a day without noticing.\n\nThat invisibility is the point. The best technology becomes background. You don’t think about compression ratios while snapping a photo; you see a clearer image. You don’t admire the noise model while calling; you just hear your friend. Edge AI wins not by being flashy, but by being the fastest, quietest path between intention and result."
+        },
+        {
+          "id": "technology-2",
+          "title": "Copilots, Not Replacements: The Real Future of AI at Work",
+          "images": [
+            "https://goweb-dacs-prod-s3.s3-ap-southeast-1.amazonaws.com/png/64fada4eb3ff7193c395bca0/opt-2-medium-shot-man-wearing-vr-glasses-scaled-f9d39a.png",
+            "https://source.unsplash.com/960x540/?work%2Cproductivity%2Ccomputer&sig=848467",
+            "https://source.unsplash.com/960x540/?work%2Cproductivity%2Ccomputer&sig=848468"
+          ],
+          "approxWords": 400,
+          "content": "AI headlines promise either utopia or layoffs. Reality sits in the dull, productive middle: AI as a copilot that handles drudgery so humans can do the parts that require judgment, taste, and accountability. Think email triage, first‑draft summaries, call notes, quick spreadsheet formulas, and gentle nudges when a doc contradicts itself.\n\nThe workflow shift looks like this. You start a task. The copilot fetches context, drafts a structure, and highlights gaps. You review, correct, and decide. That loop is faster because the annoying parts shrink: searching tabs for the right file, reformatting text, or rewriting the same three sentences for the tenth time. Speed matters, but the deeper win is cognitive: your attention stops getting chewed by logistics.\n\nGood copilots are opinionated about limits. They show sources, keep edits reversible, and mark low‑confidence guesses. They don’t try to own the outcome; they make it easier for you to own it. That humility builds trust, which is why the strongest teams pair AI with checklists, playbooks, and a culture of writing things down. If the process is legible, it’s easier for a copilot to help without inventing nonsense.\n\nWhat about skills? Ironically, AI makes foundational skills more valuable. Clear writing, basic statistics, domain vocabulary, and honest estimation are the guardrails that stop the assistant from wandering into the weeds. People who can explain their thinking in a few bullet points will extract the most leverage from a tool designed to extend that thinking.\n\nThe near future isn’t “one AI to rule them all.” It’s small helpers embedded everywhere: the calendar that suggests realistic travel time, the document that auto‑tests its own numbers, the IDE that catches an off‑by‑one before you ship a bug. Replace? No. Compress, tidy, and accelerate so the human can actually do the job they’re paid for."
+        },
+        {
+          "id": "technology-3",
+          "title": "Trustworthy Tech Starts Under the Hood: Privacy by Design and Open Firmware",
+          "images": [
+            "https://profiletree.com/wp-content/uploads/2023/02/technology-3.webp",
+            "https://source.unsplash.com/960x540/?privacy%2Cfirmware%2Crepair&sig=154543",
+            "https://source.unsplash.com/960x540/?privacy%2Cfirmware%2Crepair&sig=154544"
+          ],
+          "approxWords": 500,
+          "content": "Trust doesn’t come from a glossy settings page. It starts where your device wakes up: the boot sequence, the firmware, and the choices baked into how data moves. If that base layer is opaque, everything above it becomes a “just trust us” request. If it’s legible, you can verify claims instead of hoping they’re true.\n\nPrivacy by design means limiting collection by default, processing locally when possible, and discarding raw data early. A camera that classifies “person detected” on‑device and saves only that event is practicing privacy by design. So is a note app that encrypts before sync, not after. These patterns don’t depend on perfect algorithms; they depend on clear boundaries that make bad decisions difficult.\n\nOpen or auditable firmware strengthens those boundaries. Firmware is the quiet layer between hardware and the operating system. When it’s open, security teams can inspect the chain of trust, hobbyists can extend the life of hardware long after vendors move on, and organizations can patch vulnerabilities without waiting for a quarterly PR cycle. You don’t need to read every line yourself. You need a world where somebody can, and often does.\n\nRight‑to‑repair sits beside these ideas. If you can’t replace a battery, swap a drive, or update a boot module, you don’t own the device so much as rent its patience. Repairability extends useful life, reduces waste, and creates local competence. A city with independent repair shops is a city with resilience. It can recover from a supply hiccup, keep schools running with older laptops, and avoid ditching a thousand barely‑broken devices.\n\nNone of this is romantic. It’s infrastructure work. Documentation, reproducible builds, measured boot, transparent telemetry controls, and clear data retention policies are not viral features. But they form the difference between a product that behaves when convenient and a tool that behaves when stressed. The latter is the only kind worth trusting with your notes, photos, or front door.\n\nThe culture change is simple: celebrate legibility. Reward vendors who publish technical guarantees you can check. Prefer products that work offline and degrade gracefully. Teach students how a computer starts, not just how an app looks. When trust begins at the base, the rest of the stack can be fast, delightful, and—most importantly—honest."
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "title": "Travel Hacks",
+      "subtitle": "Short trips, street patterns, and the edges of maps",
+      "articles": [
+        {
+          "id": "travel-1",
+          "title": "The 36‑Hour Micro‑Trip Playbook",
+          "images": [
+            "https://frontenacarchbiosphere.ca/wp-content/uploads/2023/02/full-shot-travel-concept-with-landmarks-scaled.jpg",
+            "https://source.unsplash.com/960x540/?travel%2Ccity%2Cstreets&sig=91770",
+            "https://source.unsplash.com/960x540/?travel%2Ccity%2Cstreets&sig=91771"
+          ],
+          "approxWords": 300,
+          "content": "You don’t need a week to feel away. You need 36 hours and a plan that kills friction. Leave after work, arrive late, give yourself one full day, then return the next evening. It’s short enough to be affordable and long enough to reset your brain.\n\nPick a neighborhood, not a city. Anchor the day with two commitments: one place to eat, one thing to see. Everything else is walking. That constraint unlocks surprises because you stop collecting attractions and start noticing patterns: the bakery queue at 8:10, the old men arguing over chess, the street that smells like oranges after noon.\n\nPack like a commuter. Wear your heaviest shoes, bring one charger, and skip “just in case” items. Book lodging within a 10‑minute walk of transit so you can drop your bag and start. For food, aim for one reservation and one spontaneous find. Momentum beats research once you’re on the ground.\n\nSet an exit ritual. A morning photo at the same corner. A pastry from the same shop. A small postcard to yourself with two bullet points: one thing you learned and one place you’d return. That tiny tradition turns micro‑trips into a series, not a fluke. You’ll come back on Sunday night lighter, not tired, like you borrowed a better rhythm and brought a slice home."
+        },
+        {
+          "id": "travel-2",
+          "title": "Airport Algebra: Beat Lines, Find Calm, Save Money",
+          "images": [
+            "https://source.unsplash.com/960x540/?airport%2Ctravel%2Csecurity&sig=699186",
+            "https://source.unsplash.com/960x540/?airport%2Ctravel%2Csecurity&sig=699187",
+            "https://source.unsplash.com/960x540/?airport%2Ctravel%2Csecurity&sig=699188"
+          ],
+          "approxWords": 400,
+          "content": "Airports are puzzles pretending to be buildings. Solve three variables—time, distance, and policy—and you glide while everyone else sprints. Start with time. The best buffer is honest, not heroic. Check your airline’s on‑time rate and the airport’s security wait history. If your departure time collides with the morning wave, pay for fast‑track once; the hour you buy back is worth more than another hoodie.\n\nDistance is hidden in plain sight. Many terminals have back corridors, train loops, or security entries used by airport staff that are open to the public. Study the map before you arrive. Choose the security line that feeds your gate family, not the first queue you see. Walking ten extra minutes before security often saves twenty after.\n\nPolicy is where money leaks. Know your fare class rules cold: change windows, standby options, and the difference between “rebook” and “refund to credit.” If a delay breaks a minimum connection time, you’re owed solutions—sometimes hotels or meal vouchers—without needing to escalate. Screenshot everything. Polite persistence beats volume every time.\n\nTwo more tricks: pick a “calm kit” and a “power plan.” Calm kit = headphones, a short playlist, and one offline article you’ve been meaning to read. Power plan = a compact battery, a short cable, and a rule to top up whenever you sit. You don’t need new gadgets. You need fewer decisions.\n\nAirports reward pattern reading. Watch where airline crews queue, which café empties after the early flights, and which gates get reassigned most. Once you see the algebra behind the chaos, the place stops being stressful and turns into a predictable machine you can steer."
+        },
+        {
+          "id": "travel-3",
+          "title": "Read a City Like a Local: A Pattern‑Spotter’s Guide",
+          "images": [
+            "https://source.unsplash.com/960x540/?city%2Clocal%2Cneighborhood&sig=138212",
+            "https://source.unsplash.com/960x540/?city%2Clocal%2Cneighborhood&sig=138213",
+            "https://source.unsplash.com/960x540/?city%2Clocal%2Cneighborhood&sig=138214"
+          ],
+          "approxWords": 500,
+          "content": "Tourists collect sights. Locals collect rhythms. To read a city like a local, start with schedules, not landmarks. When do bakeries sell out? When does the school run clog side streets? What time do park benches actually fill? Within a day, you’ll map the breathing of a place more reliably than any top‑ten list.\n\nRide transit during rush hour even if you don’t need to. The route a city takes to work is its circulatory system. Watch how people queue, who offers seats, and where the crowd thins. Those habits explain more about values than a plaque on a statue. If the tram pauses for a stroller without honking, you’ve learned something real.\n\nFollow errands. Find the municipal library card desk, the neighborhood hardware store, the farmers’ market that shares a parking lot with a clinic. These are where ordinary life solves ordinary problems. A city that invests in clean, safe libraries usually invests in other quiet goods: sidewalks that don’t trip you, lights that feel safe at 10 p.m., staff who answer without sighing.\n\nLet small rituals anchor you. Buy a simple breakfast and return the next day. Ask what time bread comes out of the oven. People talk when you respect schedules. When you do speak, ask for directions to something specific but unglamorous—best laundry, cheapest key copy, a reliable phone repair. Locals love sharing logistics because logistics are how they survive the week.\n\nAvoid the gravity of the center for a few hours. Peripheral neighborhoods store the city’s future: where students co‑work, where families stretch budgets, where new cafés test menus. If a side street holds a kindergarten, a scooter repair, and a cheap lunch line, it’s probably honest about who actually lives there.\n\nFinally, leave with a map you drew yourself. Not a perfect grid—just a handful of arrows, circles, and times that meant something. The point isn’t to “do” the city. It’s to learn its grammar so next time you arrive, you can speak in complete sentences."
+        }
+      ]
+    },
+    {
+      "id": "wildlife",
+      "title": "Wildlife & Nature",
+      "subtitle": "Adaptation, patience, and the rooms made by trees and tides",
+      "articles": [
+        {
+          "id": "wildlife-1",
+          "title": "The Urban Bird Survival Guide (For Humans Who Notice)",
+          "images": [
+            "https://live.worldtourismforum.net/uploads/Travel%20photography.jpg",
+            "https://source.unsplash.com/960x540/?wildlife%2Curban%2Cbirds&sig=497864",
+            "https://source.unsplash.com/960x540/?wildlife%2Curban%2Cbirds&sig=497865"
+          ],
+          "approxWords": 300,
+          "content": "City birds are professional adapters. They treat scaffolding like cliffs, drainpipes like streams, and café tables like buffet lines. Watch long enough and you’ll see small genius everywhere: a sparrow timing its swoop between bike bells, a crow cracking a nut under a car tire, a swift slicing wind tunnels between buildings.\n\nTheir secret isn’t toughness. It’s flexibility. Diets expand. Nest locations improvise. Songs shift pitch to rise above buses. That willingness to edit behavior is why they thrive where fussier species vanish. It’s also why a tiny human effort goes a long way. A shallow water dish on a balcony becomes a life saver in a heat wave. A windowsill herb box turns into a pollinator stopover. Even choosing later lawn cuts in spring protects nests you’d never notice.\n\nIf you want more birds, offer three basics: water, safe structure, and food variety. Water should be shallow with a stone for perching. Structure means shrubs or planters that break sightlines so a bird can land without advertising itself to every cat. Food variety is less about buying seed and more about planting something that flowers across seasons.\n\nPay attention at the edges of the day. Dawn belongs to practice—young birds test songs when traffic is quiet. Dusk belongs to logistics—where to sleep, where to hide. The more you listen at those times, the more the city stops being noise and starts being habitat you can help shape."
+        },
+        {
+          "id": "wildlife-2",
+          "title": "Old Trees Are City Infrastructure",
+          "images": [
+            "https://source.unsplash.com/960x540/?trees%2Ccity%2Cshade&sig=735557",
+            "https://source.unsplash.com/960x540/?trees%2Ccity%2Cshade&sig=735558",
+            "https://source.unsplash.com/960x540/?trees%2Ccity%2Cshade&sig=735559"
+          ],
+          "approxWords": 400,
+          "content": "An old tree is not decoration. It’s infrastructure that cools streets, manages water, houses tiny ecosystems, and persuades strangers to linger. Sit under a mature plane tree on a summer afternoon and you can feel a microclimate clicking into place: filtered light, softer air, and noise turned down a notch.\n\nThe science is generous. Through transpiration, trees release moisture that drops ambient temperature. Their roots hold soil, reduce runoff, and quietly prevent basements from turning into puddles during heavy rain. The canopy dilutes the sharp edges of traffic sound. Birds, insects, mosses, and fungi build layered neighborhoods in the same few cubic meters of space.\n\nBut there’s a civic piece we ignore. People slow down where trees create rooms. When you slow down, you see neighbors, not just obstacles. That’s how informal safety grows: more eyes on the street, more small hellos, fewer places that feel abandoned. Remove one old tree and you don’t just lose shade. You erase a decade of routine community in a weekend.\n\nPlanting new trees matters, but time is the ingredient you can’t accelerate. Protecting mature trees is therefore less about nostalgia and more about risk management. They are already doing high‑value work you’d have to pay for with pipes, pumps, and noise barriers.\n\nWhat should a city do? Prioritize root‑zone protection during construction. Fund proactive pruning. Plant diverse species so one pest can’t collapse the canopy. And treat tree data like utility data: map it, monitor it, and plan around it. When a budget line pits “tree” against “road,” remember the road gets worse without the tree."
+        },
+        {
+          "id": "wildlife-3",
+          "title": "Tidepools: Pocket Universes With Rules You Can See",
+          "images": [
+            "https://source.unsplash.com/960x540/?tidepool%2Cocean%2Ccoast&sig=757497",
+            "https://source.unsplash.com/960x540/?tidepool%2Cocean%2Ccoast&sig=757498",
+            "https://source.unsplash.com/960x540/?tidepool%2Cocean%2Ccoast&sig=757499"
+          ],
+          "approxWords": 500,
+          "content": "At first glance a tidepool looks like a puddle with extra seaweed. Kneel, and it turns into a catalog of survival strategies. Twice a day the water rises and falls, swinging temperature, oxygen, and salinity. Creatures here don’t get to pick their weather. They prepare for both feast and drought, every few hours, forever.\n\nBarnacles solve the problem by becoming architecture. Cemented in place, they close up when exposed to air and open when the flood returns. Anemones fold into patient fists. Snails pace deliberate routes that only make sense if you map them for an hour. Each movement is an equation balancing grip, hunger, and risk.\n\nChildren love tidepools because the scale is honest. You can see the whole stage at once. Predators and prey run into each other in the same square meter. Alliances appear: a shrimp cleaning a fish it could never fight, a small crab upgrading shells like apartments. Adults relearn attention here. Ten quiet minutes reveal dramas you’d miss at full speed.\n\nTidepools are also perfect classrooms. Inputs and outputs are visible. Over‑collect a popular shell and hermit crabs start fighting for housing. A storm surge rearranges the cast overnight. Plastic threads wrap algae, turning yesterday’s harmless litter into today’s trap. It’s ecology with receipts: cause and effect so tight you can watch consequences arrive.\n\nThe etiquette is simple. Step on bare rock, not living mats. Touch with wet fingers or, better, not at all. Return lifted stones exactly as you found them; that “roof” is the difference between survival and exposure. Leave with a photo, not a pocket stuffed with souvenirs.\n\nIf you want a reminder that complexity doesn’t require size, visit a tidepool. It’s a small world with big rules, generous enough to show them to anyone willing to crouch, be still, and pay attention."
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": "History",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "history-1",
+          "title": "Tiny Turning Points That Changed Everything",
+          "images": [
+            "https://www.mooc.org/hubfs/history.jpg",
+            "https://source.unsplash.com/960x540/?history%2Cruins%2Cancient&sig=124",
+            "https://source.unsplash.com/960x540/?history%2Cruins%2Cancient&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "History rarely flips on grand speeches. It tilts on tiny choices: a letter delivered late, a bridge that held, a storm that arrived a day early.\n\nZoom in on these hinge moments and the past feels close enough to touch. You see people guessing, not masterminds scripting the future.\n\nUse that lens on your own life. Small choices stack. The track you pick today becomes the story you tell tomorrow."
+        },
+        {
+          "id": "history-2",
+          "title": "Lost Cities You Can Still Walk",
+          "images": [
+            "https://source.unsplash.com/960x540/?history%2Cruins%2Cancient&sig=160",
+            "https://source.unsplash.com/960x540/?history%2Cruins%2Cancient&sig=161",
+            "https://source.unsplash.com/960x540/?history%2Cruins%2Cancient&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Some ruins feel like paused conversations. Streets still breathe, walls still frame the sky, and you can imagine shop signs hanging from rings drilled into stone.\n\nWalk slowly. Look for water lines, hearths, and grooves where doors slid. The ordinary details are the map to daily life.\n\nBring curiosity, not a checklist. A single alley with good shadows can teach more than a whole bus tour.\n\nLeave with a sketch or a simple note. Memory sticks better when your hand moves."
+        },
+        {
+          "id": "history-3",
+          "title": "Myths We Repeat, Stories We Miss",
+          "images": [
+            "https://source.unsplash.com/960x540/?history%2Cruins%2Cancient&sig=197",
+            "https://source.unsplash.com/960x540/?history%2Cruins%2Cancient&sig=198",
+            "https://source.unsplash.com/960x540/?history%2Cruins%2Cancient&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Popular history loves heroes and neat morals. Real history is messier and more useful.\n\nSwap ‘great man’ tales for networks: supply lines, teachers, rivals, cousins. That’s where outcomes actually take shape.\n\nAsk simple questions: who paid for it, who cleaned it up, who got tired first. Logistics rewrite legends.\n\nWhen you learn to spot the quiet workers in old stories, you start seeing them in the present too.\n\nGood history doesn’t hand you answers. It hands you better questions to carry forward."
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "title": "Health & Longevity",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "health-1",
+          "title": "Sleep: The Upgrade You Feel Tomorrow",
+          "images": [
+            "https://www.oecd.org/adobe/dynamicmedia/deliver/dm-aid--41f28e9f-8a8f-47b9-b278-68a59c8f8e2a/107182c8-en.jpg?quality=80&preferwebp=true",
+            "https://source.unsplash.com/960x540/?health%2Cfitness%2Cwellness&sig=124",
+            "https://source.unsplash.com/960x540/?health%2Cfitness%2Cwellness&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Most ‘wellness’ hacks work slowly. Sleep works now. One better night and colors sharpen.\n\nStart dumb and effective: a consistent bedtime, a cool room, and less light after sunset.\n\nProtect mornings. Sunlight, water, and ten quiet breaths beat any app. Energy is a multiplier for everything else."
+        },
+        {
+          "id": "health-2",
+          "title": "Eat Smart Without Counting Everything",
+          "images": [
+            "https://source.unsplash.com/960x540/?health%2Cfitness%2Cwellness&sig=160",
+            "https://source.unsplash.com/960x540/?health%2Cfitness%2Cwellness&sig=161",
+            "https://source.unsplash.com/960x540/?health%2Cfitness%2Cwellness&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "You don’t need a spreadsheet to eat well. Build defaults: a breakfast you trust, a lunch you assemble fast, a dinner you can scale.\n\nThink in shapes: a palm of protein, a fist of veg, a thumb of fat, room for joy.\n\nBuy foods that make good decisions easy and boring: prepped greens, frozen berries, tins of fish, eggs, nuts.\n\nA simple rule: if you’re hungry and grumpy, eat first, decide later."
+        },
+        {
+          "id": "health-3",
+          "title": "Strength, The Friendly Kind",
+          "images": [
+            "https://source.unsplash.com/960x540/?health%2Cfitness%2Cwellness&sig=197",
+            "https://source.unsplash.com/960x540/?health%2Cfitness%2Cwellness&sig=198",
+            "https://source.unsplash.com/960x540/?health%2Cfitness%2Cwellness&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Strength training isn’t a personality. It’s insurance for stairs, groceries, and long weekends.\n\nStart with moves that teach control: squats to a chair, pushups on a counter, slow deadlift with a backpack.\n\nQuality beats volume. Two sessions a week done for months beat heroic weeks that end in boredom.\n\nTrack tiny wins: one more rep, steadier balance, less joint noise. Progress hides in small numbers.\n\nTreat recovery like part of the plan: sleep, walks, and enough food to rebuild."
+        }
+      ]
+    },
+    {
+      "id": "culture",
+      "title": "Culture & Society",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "culture-1",
+          "title": "Why Trends Feel Faster Now",
+          "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYD35hagrfxJLeqdaQS6b9aYywX8p_0LhwiQ&s",
+            "https://source.unsplash.com/960x540/?culture%2Cpeople%2Cfestival&sig=124",
+            "https://source.unsplash.com/960x540/?culture%2Cpeople%2Cfestival&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Trends used to travel by season. Now they travel by lunch. Feeds compress time so everything feels urgent and expired at once.\n\nBest response: pick a few things to love long term and let the rest rush by. Depth beats churn.\n\nIf a trend still looks good after a month, it might be worth your attention."
+        },
+        {
+          "id": "culture-2",
+          "title": "From Meme To Museum Piece",
+          "images": [
+            "https://source.unsplash.com/960x540/?culture%2Cpeople%2Cfestival&sig=160",
+            "https://source.unsplash.com/960x540/?culture%2Cpeople%2Cfestival&sig=161",
+            "https://source.unsplash.com/960x540/?culture%2Cpeople%2Cfestival&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Today’s joke can become tomorrow’s reference. Memes are folk art with Wi‑Fi.\n\nWatch which images escape their birth context. That’s culture turning inside out in real time.\n\nIf something keeps getting remixed across groups, it’s telling a truth nobody wants to say directly.\n\nSave your favorites. You’re building a time capsule of how people actually talked."
+        },
+        {
+          "id": "culture-3",
+          "title": "Polite Rules Nobody Wrote",
+          "images": [
+            "https://source.unsplash.com/960x540/?culture%2Cpeople%2Cfestival&sig=197",
+            "https://source.unsplash.com/960x540/?culture%2Cpeople%2Cfestival&sig=198",
+            "https://source.unsplash.com/960x540/?culture%2Cpeople%2Cfestival&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Every group runs on unwritten rules: who speaks first, how late is late, what counts as a gift.\n\nYou can learn them by watching what gets praised and what gets ignored.\n\nWhen in doubt, copy the considerate person, not the loudest one.\n\nSmall courtesies scale better than hot takes: answer messages, bring snacks, label chargers.\n\nGood manners are just user‑experience design for humans."
+        }
+      ]
+    },
+    {
+      "id": "famous",
+      "title": "Famous People",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "famous-1",
+          "title": "Genius, Explained By Boring Habits",
+          "images": [
+            "https://www.pioneeringminds.com/wp-content/uploads/2018/10/Steve-Jobs.jpg",
+            "https://source.unsplash.com/960x540/?portrait%2Cpeople%2Chistory&sig=124",
+            "https://source.unsplash.com/960x540/?portrait%2Cpeople%2Chistory&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Behind the myth there’s routine: sleep, walks, notebooks, drafts, and a friend who tells the truth.\n\nTalent opens the door. Habits keep you in the room.\n\nCopy the process, not the legend."
+        },
+        {
+          "id": "famous-2",
+          "title": "Leaders And Their Tiny Systems",
+          "images": [
+            "https://source.unsplash.com/960x540/?portrait%2Cpeople%2Chistory&sig=160",
+            "https://source.unsplash.com/960x540/?portrait%2Cpeople%2Chistory&sig=161",
+            "https://source.unsplash.com/960x540/?portrait%2Cpeople%2Chistory&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Many ‘visionary’ moves are just checklists done on time. Weekly reviews, short agendas, and clear owners beat charisma.\n\nGood leaders subtract. They remove blockers, not add slogans.\n\nLook for who takes notes and follows up. That’s usually where power quietly lives.\n\nIf a team gets calmer after a meeting, that meeting worked."
+        },
+        {
+          "id": "famous-3",
+          "title": "Reinvention Without The Meltdown",
+          "images": [
+            "https://source.unsplash.com/960x540/?portrait%2Cpeople%2Chistory&sig=197",
+            "https://source.unsplash.com/960x540/?portrait%2Cpeople%2Chistory&sig=198",
+            "https://source.unsplash.com/960x540/?portrait%2Cpeople%2Chistory&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "The best rebrands aren’t costumes. They’re honest updates.\n\nStep one: keep what already works. Step two: fix the thing that’s actually causing friction.\n\nAnnounce less, deliver more. People trust outcomes, not trailers.\n\nMake version 1.1 before you attempt 2.0. Small wins buy you permission for bigger jumps.\n\nReinvention is continuity with better shoes."
+        }
+      ]
+    },
+    {
+      "id": "science",
+      "title": "Science & Space",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "science-1",
+          "title": "Kitchen Physics You Can See",
+          "images": [
+            "https://blog.gale.com/wp-content/uploads/2024/07/iStock-1693812103.jpg",
+            "https://source.unsplash.com/960x540/?science%2Cspace%2Cstars&sig=124",
+            "https://source.unsplash.com/960x540/?science%2Cspace%2Cstars&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Boiling water, spinning eggs, shadow lengths at noon—physics isn’t far away, it’s on your counter.\n\nTry one tiny experiment today. Curiosity grows when it gets quick wins.\n\nUnderstanding the rule makes the world feel more friendly."
+        },
+        {
+          "id": "science-2",
+          "title": "Everyday Chemistry, No Lab Coat",
+          "images": [
+            "https://source.unsplash.com/960x540/?science%2Cspace%2Cstars&sig=160",
+            "https://source.unsplash.com/960x540/?science%2Cspace%2Cstars&sig=161",
+            "https://source.unsplash.com/960x540/?science%2Cspace%2Cstars&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Bread rising, rust creeping, coffee blooming—chemistry explains why small details matter.\n\nSwap fear for respect. Most reactions are about time and balance, not magic.\n\nA notebook of little experiments beats a memory of big lectures.\n\nYour kitchen timer is basically a scientific instrument. Use it."
+        },
+        {
+          "id": "science-3",
+          "title": "A City Stargazer’s Starter Pack",
+          "images": [
+            "https://source.unsplash.com/960x540/?science%2Cspace%2Cstars&sig=197",
+            "https://source.unsplash.com/960x540/?science%2Cspace%2Cstars&sig=198",
+            "https://source.unsplash.com/960x540/?science%2Cspace%2Cstars&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "You don’t need perfect darkness to meet the sky. Start with the Moon and bright planets.\n\nLearn the big triangles and lines between landmarks. Constellations are just memory aids.\n\nUse a chair, a warm drink, and a single goal for the night. Comfort extends attention.\n\nIf you spot a satellite, you’ve already touched the modern sky.\n\nThe universe rewards patience. Fifteen minutes is a good start."
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "food-1",
+          "title": "Street Food Logic",
+          "images": [
+            "https://sherohomefood.in/wp-content/uploads/2021/05/SHF_home-slide-1.jpg",
+            "https://source.unsplash.com/960x540/?food%2Cstreet%2Cmarket&sig=124",
+            "https://source.unsplash.com/960x540/?food%2Cstreet%2Cmarket&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Great street food solves three problems: speed, repetition, and joy.\n\nWatch the stall rhythm: prep, sizzle, serve. That rhythm is flavor you can feel.\n\nIf locals queue, the math already works. Join them."
+        },
+        {
+          "id": "food-2",
+          "title": "Your Kitchen, But Easier",
+          "images": [
+            "https://source.unsplash.com/960x540/?food%2Cstreet%2Cmarket&sig=160",
+            "https://source.unsplash.com/960x540/?food%2Cstreet%2Cmarket&sig=161",
+            "https://source.unsplash.com/960x540/?food%2Cstreet%2Cmarket&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Set up stations: cutting board lives near trash, pan near oil and salt, plates within one reach.\n\nMake a ‘default dinner’ you can cook on autopilot. Confidence invites experiments.\n\nBatch boring parts on Sunday and thank yourself on Wednesday.\n\nClean as you go. Future‑you is also you."
+        },
+        {
+          "id": "food-3",
+          "title": "Spice Tour Without A Plane Ticket",
+          "images": [
+            "https://source.unsplash.com/960x540/?food%2Cstreet%2Cmarket&sig=197",
+            "https://source.unsplash.com/960x540/?food%2Cstreet%2Cmarket&sig=198",
+            "https://source.unsplash.com/960x540/?food%2Cstreet%2Cmarket&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Pick three spices you don’t use yet and learn them by smell first.\n\nToast a pinch in a dry pan. The scent is the map.\n\nPair one new spice with a familiar base each week. Notes write themselves.\n\nA tiny jar can change how a whole month tastes.\n\nTravel is great. A well‑stocked shelf is closer."
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education & Learning",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "education-1",
+          "title": "Tiny Habits Beat Big Promises",
+          "images": [
+            "https://india.un.org/sites/default/files/styles/featured_image/public/2022-02/UN0122069%20-%20Copy.jpeg?itok=cKNQOHvK",
+            "https://source.unsplash.com/960x540/?education%2Cbooks%2Cclassroom&sig=124",
+            "https://source.unsplash.com/960x540/?education%2Cbooks%2Cclassroom&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Ten minutes daily beats two hours someday. Momentum loves small wins.\n\nAttach study to an anchor: after tea, before bed, during a commute.\n\nMake quitting harder than starting by laying out tools in advance."
+        },
+        {
+          "id": "education-2",
+          "title": "Notes You’ll Actually Reuse",
+          "images": [
+            "https://source.unsplash.com/960x540/?education%2Cbooks%2Cclassroom&sig=160",
+            "https://source.unsplash.com/960x540/?education%2Cbooks%2Cclassroom&sig=161",
+            "https://source.unsplash.com/960x540/?education%2Cbooks%2Cclassroom&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Write for future‑you: short headings, bold verbs, one example per idea.\n\nLink notes together with simple tags so ideas meet each other later.\n\nReview on a schedule you can keep: weekly is plenty.\n\nGood notes reduce anxiety because they hold what you don’t have to."
+        },
+        {
+          "id": "education-3",
+          "title": "Teach Yourself Anything, Kindly",
+          "images": [
+            "https://source.unsplash.com/960x540/?education%2Cbooks%2Cclassroom&sig=197",
+            "https://source.unsplash.com/960x540/?education%2Cbooks%2Cclassroom&sig=198",
+            "https://source.unsplash.com/960x540/?education%2Cbooks%2Cclassroom&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Pick a clear finish line: a small project, a conversation, a demo.\n\nAlternate modes: watch, write, build, explain. Each reveals gaps.\n\nAsk better questions sooner. ‘What’s the simplest working version?’ beats ‘What’s the best tool?’\n\nJoin a tiny community or a friend. Accountability is a quiet superpower.\n\nCelebrate shipping, not perfection."
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "title": "Environment",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "environment-1",
+          "title": "Your Personal Plastic Diet",
+          "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB6QexcV5CNtoP3TTBoL9EOPQZ1UipT3S_cg&s",
+            "https://source.unsplash.com/960x540/?environment%2Criver%2Cforest&sig=124",
+            "https://source.unsplash.com/960x540/?environment%2Criver%2Cforest&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "You can’t fix the ocean alone, but you can vote with your cart.\n\nFavor refills, bigger containers, and durable bottles.\n\nSmall swaps add up when they survive your busy week."
+        },
+        {
+          "id": "environment-2",
+          "title": "Neighborhood Nature Wins",
+          "images": [
+            "https://source.unsplash.com/960x540/?environment%2Criver%2Cforest&sig=160",
+            "https://source.unsplash.com/960x540/?environment%2Criver%2Cforest&sig=161",
+            "https://source.unsplash.com/960x540/?environment%2Criver%2Cforest&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Plant shade where people actually walk. Add a bench near a breeze.\n\nTurn a dull corner into a micro‑garden. Native plants thrive with less drama.\n\nPick one monthly clean‑up and make it social. Snacks help.\n\nLocal changes stack faster than global speeches."
+        },
+        {
+          "id": "environment-3",
+          "title": "Rivers Are The City’s Story",
+          "images": [
+            "https://source.unsplash.com/960x540/?environment%2Criver%2Cforest&sig=197",
+            "https://source.unsplash.com/960x540/?environment%2Criver%2Cforest&sig=198",
+            "https://source.unsplash.com/960x540/?environment%2Criver%2Cforest&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Follow a river through a town and you’ll read its history in layers: mills, parks, warehouses, paths.\n\nGood river care starts upstream with boring fixes: gutters, drains, and patience.\n\nWalk the banks after rain. That’s when problems introduce themselves.\n\nIf kids can reach the water safely, the city probably made other smart choices too.\n\nHealthy rivers are civic mirrors. Clear water rarely happens by accident."
+        }
+      ]
+    },
+    {
+      "id": "sports",
+      "title": "Sports & Games",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "sports-1",
+          "title": "Underdog Math",
+          "images": [
+            "https://img.freepik.com/premium-photo/silhouette-action-sport-outdoors-young-man-having-fun-playing-soccer-football-exercise-sunset_34141-616.jpg",
+            "https://source.unsplash.com/960x540/?sports%2Cstadium%2Ctraining&sig=124",
+            "https://source.unsplash.com/960x540/?sports%2Cstadium%2Ctraining&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Upsets aren’t magic. They’re momentum plus a plan that fits your strengths.\n\nCut mistakes, protect energy, and stay close until the late game.\n\nBelief arrives when the score keeps agreeing."
+        },
+        {
+          "id": "sports-2",
+          "title": "Rituals Of Champions",
+          "images": [
+            "https://source.unsplash.com/960x540/?sports%2Cstadium%2Ctraining&sig=160",
+            "https://source.unsplash.com/960x540/?sports%2Cstadium%2Ctraining&sig=161",
+            "https://source.unsplash.com/960x540/?sports%2Cstadium%2Ctraining&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Pre‑game routines look mysterious from far away. Up close they’re just consistency.\n\nSleep, warm‑up, a short list of cues, and a way to reset after errors.\n\nRituals are anchors when pressure shakes the boat.\n\nCopy one. You don’t need all of them."
+        },
+        {
+          "id": "sports-3",
+          "title": "Esports Focus In Real Life",
+          "images": [
+            "https://source.unsplash.com/960x540/?sports%2Cstadium%2Ctraining&sig=197",
+            "https://source.unsplash.com/960x540/?sports%2Cstadium%2Ctraining&sig=198",
+            "https://source.unsplash.com/960x540/?sports%2Cstadium%2Ctraining&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Top players master attention. They control inputs: light, sound, posture, breaks.\n\nShort review loops beat long marathons. Ten focused runs trump one blurry session.\n\nTeam comms matter: say less, say clearer, say on time.\n\nUse the same discipline for studying or work. A headset can mean ‘do not disturb’ anywhere.\n\nSkill is practice plus rest, in any arena."
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "title": "Business & Startups",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "business-1",
+          "title": "From Idea To First Customer",
+          "images": [
+            "https://investinasia.id/blog/wp-content/uploads/2023/07/business3.jpg",
+            "https://source.unsplash.com/960x540/?startup%2Cbusiness%2Coffice&sig=124",
+            "https://source.unsplash.com/960x540/?startup%2Cbusiness%2Coffice&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Sell the smallest version to one real person. Feedback > fantasy.\n\nCharge early. Price is information.\n\nRepeat what works once. That’s a business plan’s first draft."
+        },
+        {
+          "id": "business-2",
+          "title": "When To Quit, When To Push",
+          "images": [
+            "https://source.unsplash.com/960x540/?startup%2Cbusiness%2Coffice&sig=160",
+            "https://source.unsplash.com/960x540/?startup%2Cbusiness%2Coffice&sig=161",
+            "https://source.unsplash.com/960x540/?startup%2Cbusiness%2Coffice&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Track a few honest numbers: leads, conversion, repeat buys. Feelings lie, numbers nudge.\n\nQuit dead channels fast. Double down where strangers become fans.\n\nSet a review date on paper and keep it.\n\nMomentum is a metric. Protect it."
+        },
+        {
+          "id": "business-3",
+          "title": "Meetings That Don’t Drain You",
+          "images": [
+            "https://source.unsplash.com/960x540/?startup%2Cbusiness%2Coffice&sig=197",
+            "https://source.unsplash.com/960x540/?startup%2Cbusiness%2Coffice&sig=198",
+            "https://source.unsplash.com/960x540/?startup%2Cbusiness%2Coffice&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Invite fewer people. End earlier than you think you can.\n\nStart with written context so nobody plays telephone.\n\nDecisions get owners and dates, not vibes.\n\nSilence isn’t agreement; do a quick round of checks.\n\nCancel the weekly meeting that no longer has a job."
+        }
+      ]
+    },
+    {
+      "id": "psychology",
+      "title": "Psychology & Mind",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "psychology-1",
+          "title": "Procrastination, Gently Fixed",
+          "images": [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB3yjEodoiH-6aUxWYJl_aqtRrW0sJrehxrw&s",
+            "https://source.unsplash.com/960x540/?psychology%2Cmind%2Chabits&sig=124",
+            "https://source.unsplash.com/960x540/?psychology%2Cmind%2Chabits&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "You’re not lazy; the task is undefined. Make the first step tiny and visible.\n\nSet a five‑minute timer and promise to stop when it rings.\n\nAction shrinks fear faster than pep talks."
+        },
+        {
+          "id": "psychology-2",
+          "title": "Habits That Don’t Fall Apart",
+          "images": [
+            "https://source.unsplash.com/960x540/?psychology%2Cmind%2Chabits&sig=160",
+            "https://source.unsplash.com/960x540/?psychology%2Cmind%2Chabits&sig=161",
+            "https://source.unsplash.com/960x540/?psychology%2Cmind%2Chabits&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Attach habits to anchors you already do: tea, commute, bedtime.\n\nTrack streaks lightly. Celebrate rest days on purpose.\n\nMake your environment do the heavy lifting: shoes by the door, books on the pillow.\n\nMomentum beats motivation."
+        },
+        {
+          "id": "psychology-3",
+          "title": "Social Nerves In Real Life",
+          "images": [
+            "https://source.unsplash.com/960x540/?psychology%2Cmind%2Chabits&sig=197",
+            "https://source.unsplash.com/960x540/?psychology%2Cmind%2Chabits&sig=198",
+            "https://source.unsplash.com/960x540/?psychology%2Cmind%2Chabits&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Plan three questions before you arrive. Curiosity is armor.\n\nStand near transitions: drink table, entrance, snack corner. Conversations find you there.\n\nExit lines are kind. ‘I’m grabbing water—want one?’ works.\n\nOne good connection > ten business cards.\n\nYou don’t have to be dazzling. You have to be present."
+        }
+      ]
+    },
+    {
+      "id": "art",
+      "title": "Art & Design",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "art-1",
+          "title": "Why Simple Usually Wins",
+          "images": [
+            "https://www.lawsonstate.edu/_resources/assets/img/art9.jpg",
+            "https://source.unsplash.com/960x540/?art%2Cdesign%2Cstudio&sig=124",
+            "https://source.unsplash.com/960x540/?art%2Cdesign%2Cstudio&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Clarity survives context. Fancy fades fast.\n\nRemove one element and see if the message gets sharper.\n\nGood design feels obvious after you see it."
+        },
+        {
+          "id": "art-2",
+          "title": "Color Stories You Can Feel",
+          "images": [
+            "https://source.unsplash.com/960x540/?art%2Cdesign%2Cstudio&sig=160",
+            "https://source.unsplash.com/960x540/?art%2Cdesign%2Cstudio&sig=161",
+            "https://source.unsplash.com/960x540/?art%2Cdesign%2Cstudio&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Colors carry temperature, memory, and rhythm. Warm pulls close; cool gives space.\n\nPick a palette from a photo you love and reuse it everywhere.\n\nLimit yourself to a few tones. Restraint makes harmony.\n\nWhite space is also a color. Treat it kindly."
+        },
+        {
+          "id": "art-3",
+          "title": "Design For Real Attention",
+          "images": [
+            "https://source.unsplash.com/960x540/?art%2Cdesign%2Cstudio&sig=197",
+            "https://source.unsplash.com/960x540/?art%2Cdesign%2Cstudio&sig=198",
+            "https://source.unsplash.com/960x540/?art%2Cdesign%2Cstudio&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "People skim. Design as if you’re helping a friend in a hurry.\n\nBig headings, short lines, generous margins, and tap‑friendly targets.\n\nTest on a phone in bright light. If it works there, it works anywhere.\n\nAccessibility isn’t a checkbox. It’s respect with math.\n\nBeauty appears when friction disappears."
+        }
+      ]
+    },
+    {
+      "id": "cities",
+      "title": "Cities & Urban Life",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "cities-1",
+          "title": "Sidewalk Economics",
+          "images": [
+            "https://lightroom-photoshop-tutorials.com/wp-content/uploads/2021/01/Bustling-Urban-Life-Through-a-Lens.webp",
+            "https://source.unsplash.com/960x540/?city%2Curban%2Cstreet&sig=124",
+            "https://source.unsplash.com/960x540/?city%2Curban%2Cstreet&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "A good sidewalk is a small factory: it makes chance meetings, safe walks, and quick errands.\n\nBenches, shade, and crossings turn strangers into neighbors.\n\nIf kids can walk it, the city is working."
+        },
+        {
+          "id": "cities-2",
+          "title": "Housing, Explained Simply",
+          "images": [
+            "https://source.unsplash.com/960x540/?city%2Curban%2Cstreet&sig=160",
+            "https://source.unsplash.com/960x540/?city%2Curban%2Cstreet&sig=161",
+            "https://source.unsplash.com/960x540/?city%2Curban%2Cstreet&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Build more where people want to live. Near jobs, near trains, near schools.\n\nRules decide prices: height, parking, permits. Tweak rules, shift outcomes.\n\nKeep old buildings alive; they’re the affordable units of tomorrow.\n\nHomes first, cars second, slogans never."
+        },
+        {
+          "id": "cities-3",
+          "title": "Night Safety By Design",
+          "images": [
+            "https://source.unsplash.com/960x540/?city%2Curban%2Cstreet&sig=197",
+            "https://source.unsplash.com/960x540/?city%2Curban%2Cstreet&sig=198",
+            "https://source.unsplash.com/960x540/?city%2Curban%2Cstreet&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Light the path, not the sky. Glare hides faces; soft light shows them.\n\nTrim hedges, open sightlines, and fix broken fixtures quickly.\n\nMix uses: late cafés beside bus stops keep eyes on the street.\n\nInvite foot traffic with small reasons to linger: kiosks, music, clean corners.\n\nSafety grows where people feel expected."
+        }
+      ]
+    },
+    {
+      "id": "entrepreneurship",
+      "title": "Entrepreneurship",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "entrepreneurship-1",
+          "title": "Start A Side Project Without Drama",
+          "images": [
+            "https://www.econlib.org/wp-content/uploads/2020/07/entrepreneurship2.jpg",
+            "https://source.unsplash.com/960x540/?entrepreneur%2Cstartup%2Cfounder&sig=124",
+            "https://source.unsplash.com/960x540/?entrepreneur%2Cstartup%2Cfounder&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Pick a weekend‑sized problem. Ship a rough draft to a friend.\n\nName the next two steps and schedule them.\n\nTreat it like practice, not destiny."
+        },
+        {
+          "id": "entrepreneurship-2",
+          "title": "Pricing Without Tears",
+          "images": [
+            "https://source.unsplash.com/960x540/?entrepreneur%2Cstartup%2Cfounder&sig=160",
+            "https://source.unsplash.com/960x540/?entrepreneur%2Cstartup%2Cfounder&sig=161",
+            "https://source.unsplash.com/960x540/?entrepreneur%2Cstartup%2Cfounder&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Price the outcome, not the hours. Offer simple tiers.\n\nRaise prices for urgency, not for everyone.\n\nSay the number out loud until it stops sounding weird.\n\nDiscounts buy behavior, not love. Use them sparingly."
+        },
+        {
+          "id": "entrepreneurship-3",
+          "title": "Tell Your Product’s True Story",
+          "images": [
+            "https://source.unsplash.com/960x540/?entrepreneur%2Cstartup%2Cfounder&sig=197",
+            "https://source.unsplash.com/960x540/?entrepreneur%2Cstartup%2Cfounder&sig=198",
+            "https://source.unsplash.com/960x540/?entrepreneur%2Cstartup%2Cfounder&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Stories beat specs because they explain stakes.\n\nWho was struggling, what changed, and how do we know?\n\nUse one vivid example instead of five vague claims.\n\nCut the buzzwords. Keep the verbs.\n\nIf a stranger can retell your story, it’s ready."
+        }
+      ]
+    },
+    {
+      "id": "climate",
+      "title": "Climate & Energy",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "climate-1",
+          "title": "Heat, Handled",
+          "images": [
+            "https://ourfuture.energy/wp-content/uploads/2021/08/energy-transition-1800-shutterstock_1278873550.jpg",
+            "https://source.unsplash.com/960x540/?climate%2Cenergy%2Csolar&sig=124",
+            "https://source.unsplash.com/960x540/?climate%2Cenergy%2Csolar&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Shade, water, and timing. That’s the survival kit for hot days.\n\nPlan errands for mornings. Cool the room, not the street.\n\nCheck on neighbors. Resilience is social."
+        },
+        {
+          "id": "climate-2",
+          "title": "Electric, Without The Myths",
+          "images": [
+            "https://source.unsplash.com/960x540/?climate%2Cenergy%2Csolar&sig=160",
+            "https://source.unsplash.com/960x540/?climate%2Cenergy%2Csolar&sig=161",
+            "https://source.unsplash.com/960x540/?climate%2Cenergy%2Csolar&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Most trips are short. That’s where electric shines: quiet, cheap, easy to charge at home.\n\nLook at total cost over years, not the sticker today.\n\nPublic chargers are growing. So are home solutions in ordinary buildings.\n\nTry a rental for a weekend before deciding."
+        },
+        {
+          "id": "climate-3",
+          "title": "Local Power, Small Wins",
+          "images": [
+            "https://source.unsplash.com/960x540/?climate%2Cenergy%2Csolar&sig=197",
+            "https://source.unsplash.com/960x540/?climate%2Cenergy%2Csolar&sig=198",
+            "https://source.unsplash.com/960x540/?climate%2Cenergy%2Csolar&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Start with efficiency: seal drafts, smart thermostats, LED lighting.\n\nCommunity solar and shared batteries turn neighbors into a mini‑grid.\n\nAppliances matter more than statements. Replace the worst offender first.\n\nWhen bills drop, belief follows. Show, don’t preach.\n\nBig change starts at the boring switches."
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "title": "Transportation",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "transport-1",
+          "title": "Bike And Car Can Coexist",
+          "images": [
+            "https://bestcargo.vn/en/wp-content/uploads/2023/02/travel-and-transportation-banner.jpg",
+            "https://source.unsplash.com/960x540/?transport%2Ctrain%2Cbike&sig=124",
+            "https://source.unsplash.com/960x540/?transport%2Ctrain%2Cbike&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Protected lanes, predictable rules, and patient turns. Peace arrives when design leads.\n\nIf biking feels safe for a twelve‑year‑old, the network is working.\n\nEveryone gets home faster when everyone relaxes."
+        },
+        {
+          "id": "transport-2",
+          "title": "Micromobility, The Fun Commute",
+          "images": [
+            "https://source.unsplash.com/960x540/?transport%2Ctrain%2Cbike&sig=160",
+            "https://source.unsplash.com/960x540/?transport%2Ctrain%2Cbike&sig=161",
+            "https://source.unsplash.com/960x540/?transport%2Ctrain%2Cbike&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Scooters and e‑bikes fill the short‑trip gap. They’re cheap, quick, and smile‑generating.\n\nGood parking solves half the complaints. Charging solves the rest.\n\nTry a weekly ‘car‑light’ day. See what changes.\n\nFun is a transport policy too."
+        },
+        {
+          "id": "transport-3",
+          "title": "The Case For Trains You Actually Like",
+          "images": [
+            "https://source.unsplash.com/960x540/?transport%2Ctrain%2Cbike&sig=197",
+            "https://source.unsplash.com/960x540/?transport%2Ctrain%2Cbike&sig=198",
+            "https://source.unsplash.com/960x540/?transport%2Ctrain%2Cbike&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Trains shrink distance without turning travel into a sport.\n\nTables, chargers, and views you can daydream through. That’s productivity without pain.\n\nCities connected by reliable rail act like one big job market.\n\nPlan trips around arrivals, not departures. Trains that land you downtown save hours.\n\nIf the line is frequent, you don’t need a timetable. That’s freedom."
+        }
+      ]
+    },
+    {
+      "id": "digital",
+      "title": "Digital Life",
+      "subtitle": "",
+      "articles": [
+        {
+          "id": "digital-1",
+          "title": "Privacy Basics You’ll Keep",
+          "images": [
+            "https://journal-digitallife.com/wp-content/themes/digitallife/assets/images/why-digital-life.jpg",
+            "https://source.unsplash.com/960x540/?digital%2Cprivacy%2Cphone&sig=124",
+            "https://source.unsplash.com/960x540/?digital%2Cprivacy%2Cphone&sig=125"
+          ],
+          "approxWords": 300,
+          "content": "Use strong unique passwords and a manager so you don’t think about them again.\n\nTurn on two‑factor. Update when nudged.\n\nShare less by default. You won’t miss the overshare."
+        },
+        {
+          "id": "digital-2",
+          "title": "An Algorithm Diet",
+          "images": [
+            "https://source.unsplash.com/960x540/?digital%2Cprivacy%2Cphone&sig=160",
+            "https://source.unsplash.com/960x540/?digital%2Cprivacy%2Cphone&sig=161",
+            "https://source.unsplash.com/960x540/?digital%2Cprivacy%2Cphone&sig=162"
+          ],
+          "approxWords": 400,
+          "content": "Mute aggressive feeds for a week. Curate a calm list you actually enjoy.\n\nSet app timers and honor them. Your attention is fuel.\n\nMake your home screen short and boring. Hide the candy in a folder.\n\nOffline hours are a power move."
+        },
+        {
+          "id": "digital-3",
+          "title": "Creator Reality Check",
+          "images": [
+            "https://source.unsplash.com/960x540/?digital%2Cprivacy%2Cphone&sig=197",
+            "https://source.unsplash.com/960x540/?digital%2Cprivacy%2Cphone&sig=198",
+            "https://source.unsplash.com/960x540/?digital%2Cprivacy%2Cphone&sig=199"
+          ],
+          "approxWords": 500,
+          "content": "Publishing often beats publishing perfectly.\n\nPick a niche you can talk about on tired days.\n\nBatch ideas, schedule posts, and rest anyway.\n\nEngage like a human: reply, credit, and say thanks.\n\nGrowth feels slow until it doesn’t. Keep going."
+        }
+      ]
+    }
+  ]
+}

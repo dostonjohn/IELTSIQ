@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IELTS Reading - Early Photographic Processes</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --button-bg: #006699;
+  --button-hover: #004466;
+  --progress-incomplete: #bdbdbd;
+  --progress-complete: #28a745;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+}
+header, footer {
+  background: #f8f8f8;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+main { display: flex; height: calc(100vh - 120px); overflow: hidden; }
+.passage-container, .questions-container {
+  width: 50%; padding: 20px; overflow-y: auto;
+}
+.passage-title {
+  font-size: 26px; font-weight: 700; margin-bottom: 20px;
+}
+.passage-text p {
+  margin-bottom: 16px; text-align: justify; line-height: 1.6;
+}
+.section-title {
+  font-size: 20px; font-weight: 700;
+  margin: 20px 0 10px; border-bottom: 2px solid #ccc;
+  padding-bottom: 5px; color: #444;
+}
+.instructions { font-style: italic; color: #555; margin-bottom: 10px; }
+.question {
+  margin-bottom: 20px; padding: 12px; border-left: 4px solid #eee;
+  background: #f9f9f9; border-radius: 5px;
+}
+.question-title { display: flex; align-items: flex-start; font-size: 17px; font-weight: 500; }
+.question-number {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--progress-incomplete); color: #fff;
+  text-align: center; line-height: 28px; margin-right: 10px;
+  font-size: 14px; font-weight: bold;
+}
+.question.answered .question-number { background: var(--progress-complete); }
+.options label, .match-select {
+  display: block; margin: 5px 0; font-size: 16px;
+}
+.fill-in-the-blank {
+  border: none; border-bottom: 2px solid #333;
+  width: 200px; text-align: center; font-size: 16px;
+}
+.match-select { width: 100%; padding: 6px; font-size: 16px; }
+.action-buttons { display: flex; gap: 12px; }
+button {
+  padding: 8px 16px; border: none; border-radius: 4px;
+  cursor: pointer; font-weight: 600; font-size: 15px;
+}
+.btn-primary { background: var(--button-bg); color: #fff; }
+.btn-primary:hover { background: var(--button-hover); }
+.btn-secondary {
+  background: transparent; border: 1px solid var(--button-bg);
+  color: var(--button-bg);
+}
+.btn-secondary:hover { background: rgba(0,102,153,0.1); }
+.progress-container {
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.progress-item {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--progress-incomplete); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-weight: bold;
+}
+.progress-item.completed { background: var(--progress-complete); }
+#feedback-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7); display: none;
+  justify-content: center; align-items: center;
+}
+.feedback-container {
+  background: #fff; width: 80%; max-width: 800px; padding: 20px;
+  border-radius: 8px; max-height: 90%; overflow: auto;
+}
+.feedback-item {
+  margin-bottom: 15px; background: #f9f9f9;
+  padding: 10px; border-radius: 5px;
+}
+.correct { color: var(--progress-complete); }
+.incorrect { color: #dc3545; }
+.highlight { background: yellow; color: black; outline: 1px solid rgba(0,0,0,0.2); }
+body.dark .highlight { background: #ffe082; color: #000; outline: 1px solid rgba(255,255,255,0.15); }
+/* Dark mode */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --button-bg: #1e88e5;
+  --button-hover: #1565c0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+body.dark header, body.dark footer {
+  background: #1f1f1f;
+}
+body.dark .question {
+  background: #1e1e1e;
+  border-left-color: #333;
+}
+body.dark #feedback-body { color: white; }
+body.dark .feedback-item { background: #2a2a2a; }
+
+#tg-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--button-bg);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--button-bg);
+  font-weight: 600;
+  margin-left: 10px;
+}
+#tg-link:hover { background: rgba(0,102,153,0.1); }
+body.dark #tg-link { border-color: var(--button-bg); color: var(--button-bg); }
+.inline-input {
+  width: 160px;
+  border: none;
+  border-bottom: 2px solid #555;
+  background: transparent;
+  font-size: 15px;
+  padding: 2px 4px;
+  margin: 0 6px 0 3px;
+  color: inherit;
+  vertical-align: middle;
+}
+.inline-input:focus {
+  outline: none;
+  border-bottom: 2px solid #1e88e5;
+}
+body.dark .inline-input {
+  border-bottom: 2px solid #ccc;
+  color: #fff;
+}
+.qbadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--progress-incomplete);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 6px 0 6px;
+  vertical-align: middle;
+}
+body.dark .qbadge {
+  background: var(--progress-complete);
+}
+</style>
+</head>
+<body class="dark">
+<header>
+<div style="flex:1;"><strong>Passage 1</strong></div>
+<div class="timer-container" style="flex:1; justify-content:flex-end; display:flex;">
+<i class="fas fa-clock"></i> <span id="timer">20:00</span>
+<button class="btn-secondary" id="start-timer">Start</button>
+<button class="btn-secondary" id="pause-timer">Pause</button>
+<button class="btn-secondary" id="reset-timer">Reset</button>
+</div>
+</header>
+<div class="progress-bubbles"></div>
+<main>
+<div class="passage-container">
+<div class="passage-title">Early Photographic Processes</div>
+<div class="passage-text" id="passage-text">
+<p>The decades following photography’s experimental beginnings in the 1820s and the public availability of a practical photographic process from 1839 were characterized by the introduction of a wide number of photographic processes. The following are a few of the most significant.</p>
+<p>Announced in Paris in 1839, the daguerreotype was the first publicly available photographic process. The daguerreotype image was created on a silvered metal plate exposed to iodine fumes, forming a light-sensitive surface of silver iodide. Development was achieved by exposing the plate to fumes of heated mercury and then fixing the image in a salt solution. The daguerreotype produced remarkably sharp pictures, but unlike competing processes, each daguerreotype was unique. This proved to be its major drawback, compared to other processes from which unlimited copies could be made.</p>
+<p>One of the oldest and longest surviving photographic processes, the cyanotype or blueprint, was invented by Sir John Herschel in 1840, using a mixture of ferric ammonium citrate and potassium ferricyanide to produce a light sensitive paper. As a relatively simple process to prepare and manipulate – it required no development or fixing other than washing – it was popular among amateurs throughout the nineteenth century and has also been widely used by engineers and architects for reproducing technical drawings (blueprints).</p>
+<p>William Henry Fox Talbot’s calotype process, the first practical negative-positive photographic process, was patented by him in 1841. A sheet of good quality paper was first treated with light-sensitive silver compounds before exposure in the camera. This produced an image in reverse, known as a negative, which was then developed in gallo-nitrate of silver and fixed. This concept of photography, allowing the production of an unlimited number of prints from a single image, has formed the basis of photographic practice until recently, when it started being challenged by digital imagery. The calotype negative was the subject of many refinements in the 1840s and 50s, and it was common practice for photographers to apply heated wax in order to increase printing transparency and lessen the visibility of the paper fibres.</p>
+<p>Frederick Scott Archer’s wet collodion process, announced in 1851, became the standard photographic process for both amateurs and professionals from the mid-1850s until the early 1880s. The process proved immediately popular, and within a decade had superseded both the daguerreotype and the calotype processes. To prepare the negative for exposure, a sheet of glass was coated with a solution of iodised collodion (a syrupy liquid composed of soluble gun-cotton, ether and alcohol) and then made light-sensitive by immersion in a bath of silver nitrate. Known as a wet process because the glass negative required sensitising, exposing and processing while the chemicals were still damp, it required significant skill to manipulate, but produced a negative of unsurpassed sharpness and a broad tonal range.</p>
+<p>The albumen print, announced by the French photographer and publisher Louis-Désiré Blanquart-Évrard in 1850, was the most widespread print medium in use between the mid-1850s and the 1890s. While the printing process was chemically similar to an earlier process which was called the ‘salted paper process’, the albumen print was generally distinguishable by the glossy sheen imparted by a preliminary sizing of the paper with albumen (egg white) and salt. After the albumen coating had been applied, the paper was made light sensitive by the addition of silver nitrate, and printed in contact with the negative. The fixed print could then be toned to create a wide variety of colours, ranging from purple-black to a rich chocolate brown. Although it continued to be used well into the twentieth century, its popularity declined after the mid-1890s, in favour of a variety of manufactured papers.</p>
+<p>The fact that all silver-based photographic images tended to fade was a source of concern from the earliest days of photography, and considerable research was carried out in attempts to produce permanent images. Perhaps the most successful of these was the carbon process. First patented by A L Poitevin in 1855, the process utilised the fact that gelatin mixed with an alkaline bichromate becomes insoluble when exposed to light. When printing from a negative, those parts of the image representing shadow tones were hardened by the exposure to light, while light areas, protected from exposure, remained unhardened and could be subsequently washed away. Carbon and other pigments could be used as colouring agents to obtain an almost unlimited range of tones in the final image. Because the process does not employ compounds derived from silver, the resulting image is less likely to fade and was widely used in book illustration in the 1870s and 1880s.</p>
+</div>
+</div>
+<div class="questions-container">
+<div class="section-title">Questions 1–7</div>
+<div class="instructions">Complete the table below. Choose ONE WORD ONLY from the passage.</div>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse; width:100%; text-align:left;">
+<thead>
+<tr>
+<th>Process</th>
+<th>Advantage</th>
+<th>Disadvantage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>daguerreotype</td>
+<td>images were very <input class="fill-in-the-blank" name="q1" placeholder="(1)" type="text"/></td>
+<td>each image was <input class="fill-in-the-blank" name="q2" placeholder="(2)" type="text"/></td>
+</tr>
+<tr>
+<td>cyanotype</td>
+<td>was comparatively <input class="fill-in-the-blank" name="q3" placeholder="(3)" type="text"/> to use</td>
+<td></td>
+</tr>
+<tr>
+<td>calotype</td>
+<td>first process which created an image called <input class="fill-in-the-blank" name="q4" placeholder="(4)" type="text"/>, from which unlimited copies could be made</td>
+<td></td>
+</tr>
+<tr>
+<td>wet collodion process</td>
+<td>produced high-quality images</td>
+<td>needed considerable <input class="fill-in-the-blank" name="q5" placeholder="(5)" type="text"/> to use</td>
+</tr>
+<tr>
+<td>albumen print</td>
+<td>produced glossy images in a range of <input class="fill-in-the-blank" name="q6" placeholder="(6)" type="text"/></td>
+<td></td>
+</tr>
+<tr>
+<td>carbon process</td>
+<td>produced permanent images because it did not use any products based on <input class="fill-in-the-blank" name="q7" placeholder="(7)" type="text"/></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="section-title">Questions 8–13</div>
+<div class="instructions">TRUE / FALSE / NOT GIVEN</div>
+<div class="question-group">
+<div class="question" id="q8"><div class="question-title"><div class="question-number">8</div><div class="question-text">The cyanotype has proved helpful in professional fields outside that of photography.</div></div><select class="match-select" name="q8"><option value="">-- Select --</option><option>TRUE</option><option>FALSE</option><option>NOT GIVEN</option></select></div>
+<div class="question" id="q9"><div class="question-title"><div class="question-number">9</div><div class="question-text">The calotype process was modified and improved upon a number of times in the years following its invention.</div></div><select class="match-select" name="q9"><option value="">-- Select --</option><option>TRUE</option><option>FALSE</option><option>NOT GIVEN</option></select></div>
+<div class="question" id="q10"><div class="question-title"><div class="question-number">10</div><div class="question-text">The wet collodion process took many years to achieve success.</div></div><select class="match-select" name="q10"><option value="">-- Select --</option><option>TRUE</option><option>FALSE</option><option>NOT GIVEN</option></select></div>
+<div class="question" id="q11"><div class="question-title"><div class="question-number">11</div><div class="question-text">From the mid 1850s to the 1890s, more photographers used the albumen print process than any other print medium.</div></div><select class="match-select" name="q11"><option value="">-- Select --</option><option>TRUE</option><option>FALSE</option><option>NOT GIVEN</option></select></div>
+<div class="question" id="q12"><div class="question-title"><div class="question-number">12</div><div class="question-text">The inventor of the carbon process solved a long-standing problem by taking advantage of a particular feature of gelatin.</div></div><select class="match-select" name="q12"><option value="">-- Select --</option><option>TRUE</option><option>FALSE</option><option>NOT GIVEN</option></select></div>
+<div class="question" id="q13"><div class="question-title"><div class="question-number">13</div><div class="question-text">The carbon process greatly increased the sales of illustrated books during the 1870s and 1890s.</div></div><select class="match-select" name="q13"><option value="">-- Select --</option><option>TRUE</option><option>FALSE</option><option>NOT GIVEN</option></select></div>
+</div>
+</div>
+</main>
+<footer>
+<div class="progress-container" id="progress-container"></div>
+<div class="action-buttons">
+<button class="btn-secondary" id="reset-btn">Reset Answers</button>
+<button class="btn-primary" id="submit-btn">Submit Answers</button>
+</div>
+</footer>
+<div id="feedback-overlay">
+<div class="feedback-container">
+<h3>Your Results <span id="score-display">0/13</span></h3>
+<div id="feedback-body"></div>
+<button class="btn-primary" id="close-feedback">Close</button>
+</div>
+</div>
+<script>
+// Timer
+let timerInterval;
+let seconds = 1200;
+let running = false;
+const timerDisplay = document.getElementById('timer');
+function formatTime(s) {
+  const m = Math.floor(s / 60).toString().padStart(2, '0');
+  const sec = (s % 60).toString().padStart(2, '0');
+  return m + ":" + sec;
+}
+function updateTimer() {
+  timerDisplay.textContent = formatTime(seconds);
+  if (seconds <= 0) {
+    clearInterval(timerInterval);
+    running = false;
+    document.getElementById('submit-btn').click();
+  }
+}
+document.getElementById('start-timer').addEventListener('click', () => {
+  if (!running) {
+    running = true;
+    timerInterval = setInterval(() => {
+      seconds--;
+      updateTimer();
+    }, 1000);
+  }
+});
+document.getElementById('pause-timer').addEventListener('click', () => {
+  running = false; clearInterval(timerInterval);
+});
+document.getElementById('reset-timer').addEventListener('click', () => {
+  running = false; clearInterval(timerInterval);
+  seconds = 1200; updateTimer();
+});
+
+document.getElementById('close-feedback').addEventListener('click', () => {
+  document.getElementById('feedback-overlay').style.display = 'none';
+});
+
+// Answers (left as-is)
+const answers = {
+  1: 'sharp',
+  2: 'unique',
+  3: 'simple',
+  4: 'negative',
+  5: 'skill',
+  6: 'colours',
+  7: 'silver',
+  8: 'TRUE',
+  9: 'TRUE',
+  10: 'FALSE',
+  11: 'TRUE',
+  12: 'TRUE',
+  13: 'NOT GIVEN'
+};
+
+document.getElementById('submit-btn').addEventListener('click', () => {
+  let correct = 0;
+  const fb = document.getElementById('feedback-body');
+  fb.innerHTML = '';
+
+  for (let i = 1; i <= 13; i++) {
+    const el = document.querySelector(`[name="q${i}"]`);
+    let userAns = '';
+    if (el) {
+      if (el.tagName === 'SELECT') {
+        userAns = el.value.trim();
+      } else {
+        userAns = el.value.trim();
+      }
+    }
+    const correctAns = answers[i];
+    const isCorrect = userAns.toUpperCase() === String(correctAns).toUpperCase();
+
+    if (isCorrect) {
+      correct++;
+      if (el) {
+        el.style.border = '2px solid #28a745';
+        el.style.backgroundColor = '#d4edda';
+        el.style.color = '#155724';
+      }
+    } else {
+      if (el) {
+        el.style.border = '2px solid #dc3545';
+        el.style.backgroundColor = '#f8d7da';
+        el.style.color = '#721c24';
+      }
+    }
+
+    fb.innerHTML += `<div class="feedback-item"><strong>Q${i}:</strong> 
+      Your answer: ${userAns || 'Not answered'} 
+      ${isCorrect ? '<span class="correct">✔</span>' 
+                  : '<span class="incorrect">✘ (Correct: ' + correctAns + ')</span>'}
+    </div>`;
+  }
+
+  document.getElementById('score-display').textContent = `${correct}/13`;
+  document.getElementById('feedback-overlay').style.display = 'flex';
+});
+document.getElementById('reset-btn').addEventListener('click', () => {
+  document.querySelectorAll('input, select').forEach(el => {
+    el.value = '';
+    el.style.border = '';
+  });
+  document.getElementById('feedback-overlay').style.display = 'none';
+});
+
+// Global highlighter for the whole page (except form controls)
+(function () {
+  const BLOCK_TAGS = new Set(['INPUT','TEXTAREA','SELECT','OPTION','BUTTON','TEXTAREA']);
+
+  function isInsideBlocked(node) {
+    while (node) {
+      if (node.nodeType === 1) {
+        const tag = node.tagName;
+        if (BLOCK_TAGS.has(tag)) return true;
+        if (node.classList && node.classList.contains('highlight')) return true;
+      }
+      node = node.parentNode;
+    }
+    return false;
+  }
+
+  function highlightSelection() {
+    const sel = window.getSelection && window.getSelection();
+    if (!sel || sel.isCollapsed) return;
+
+    const range = sel.getRangeAt(0);
+    const { startContainer, endContainer } = range;
+
+    if (isInsideBlocked(startContainer) || isInsideBlocked(endContainer)) {
+      sel.removeAllRanges();
+      return;
+    }
+
+    try {
+      const text = sel.toString();
+      if (!text.trim()) return;
+
+      const wrapper = document.createElement('span');
+      wrapper.className = 'highlight';
+
+      const contents = range.extractContents();
+      wrapper.appendChild(contents);
+      range.insertNode(wrapper);
+    } catch (e) {
+      // ignore
+    } finally {
+      sel.removeAllRanges();
+    }
+  }
+
+  document.addEventListener('mouseup', highlightSelection);
+  document.addEventListener('keydown', (ev) => {
+    if ((ev.key === 'h' || ev.key === 'H') && (ev.ctrlKey || ev.metaKey)) {
+      highlightSelection();
+      ev.preventDefault();
+    }
+  });
+})();</script>
+</body>
+</html>

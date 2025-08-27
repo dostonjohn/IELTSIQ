@@ -1,0 +1,92 @@
+{
+  "sets": [
+    {
+      "id": "env-restaurant-01",
+      "title": "Restaurant crowd",
+      "audio": "/environment/restaurant-01.mp3",
+      "durationSec": 34,
+      "tasks": {
+        "gap": {
+          "prompt": "Complete the booking detail: The table is reserved under the name ____.",
+          "answers": [
+            "martin",
+            "mr martin",
+            "martin lee"
+          ],
+          "explanation": "They say: “It’s under Martin… Martin Lee.”"
+        },
+        "mcq": {
+          "question": "What time is the booking?",
+          "options": [
+            "6:15",
+            "6:45",
+            "7:15",
+            "7:45"
+          ],
+          "answerIndex": 2,
+          "explanation": "Speaker confirms: “Quarter past seven.”"
+        },
+        "keyword": {
+          "question": "Which keyword was actually mentioned?",
+          "options": [
+            "window",
+            "birthday",
+            "allergy",
+            "parking"
+          ],
+          "answerIndex": 1,
+          "explanation": "You hear: “It’s for a birthday.”"
+        },
+        "transcript": "Hi, I’d like to confirm a booking — it’s under Martin... Martin Lee. Yes, for two. Could we do quarter past seven? Great, it’s for a birthday, so a quiet corner if possible. Thanks!"
+      }
+    },
+    {
+      "id": "env-traffic-01",
+      "title": "Street traffic",
+      "audio": "/environment/traffic-01.mp3",
+      "durationSec": 32,
+      "tasks": {
+        "gap": {
+          "prompt": "Complete the address: Meet outside ____ Street Station.",
+          "answers": [
+            "baker",
+            "baker street"
+          ],
+          "explanation": "They say: “outside Baker Street Station.”"
+        },
+        "mcq": {
+          "question": "How will they travel?",
+          "options": [
+            "By bus",
+            "On foot",
+            "By taxi",
+            "By metro"
+          ],
+          "answerIndex": 1,
+          "explanation": "They say: “It’s a five‑minute walk.”"
+        },
+        "keyword": {
+          "question": "Which keyword was actually mentioned?",
+          "options": [
+            "crosswalk",
+            "detour",
+            "roadworks",
+            "tunnel"
+          ],
+          "answerIndex": 2,
+          "explanation": "You hear: “There are roadworks near the corner.”"
+        },
+        "transcript": "I’m by the lights on Baker Street — meet outside Baker Street Station. It’s only a five‑minute walk. Watch the traffic; there are roadworks near the corner, so head down the next block instead."
+      }
+    }
+  ],
+  "meta": {
+    "ui": {
+      "copy": {
+        "playHint": "Press Play to reveal the tasks",
+        "submit": "Check answers",
+        "resultsTitle": "Results"
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "sets": [
+    {
+      "id": "set1",
+      "title": "Train Delay",
+      "audio": "/paraphrase/set1.mp3",
+      "originals": [
+        "The train left the station later than expected.",
+        "Many passengers grew impatient while waiting.",
+        "Eventually, the train arrived at its final destination safely."
+      ],
+      "task1": {
+        "options": [
+          {
+            "label": "A",
+            "text": "The train departed behind schedule.",
+            "correctFor": 1
+          },
+          {
+            "label": "B",
+            "text": "Travelers became restless during the delay.",
+            "correctFor": 2
+          },
+          {
+            "label": "C",
+            "text": "The train reached its last stop without problems.",
+            "correctFor": 3
+          },
+          {
+            "label": "D",
+            "text": "The train was cancelled before it could leave.",
+            "correctFor": 0
+          },
+          {
+            "label": "E",
+            "text": "Passengers enjoyed a quick and smooth journey.",
+            "correctFor": 0
+          }
+        ]
+      },
+      "task2": {
+        "paraphrasesInOrder": [
+          "The departure happened later than planned.",
+          "People waiting started to lose patience.",
+          "The train made it to the end of the line in good condition."
+        ]
+      }
+    },
+    {
+      "id": "set2",
+      "title": "Birthday Cake",
+      "audio": "/paraphrase/set2.mp3",
+      "originals": [
+        "Sarah baked a cake for her friend’s birthday.",
+        "She decorated it with colorful icing and candles.",
+        "Everyone at the party enjoyed eating it together."
+      ],
+      "task1": {
+        "options": [
+          {
+            "label": "A",
+            "text": "The cake was prepared by Sarah to celebrate her friend.",
+            "correctFor": 1
+          },
+          {
+            "label": "B",
+            "text": "The cake was covered with bright frosting and candles.",
+            "correctFor": 2
+          },
+          {
+            "label": "C",
+            "text": "The guests happily shared the cake during the celebration.",
+            "correctFor": 3
+          },
+          {
+            "label": "D",
+            "text": "Sarah bought snacks from the store instead of baking.",
+            "correctFor": 0
+          },
+          {
+            "label": "E",
+            "text": "Nobody touched the cake because it was ruined.",
+            "correctFor": 0
+          }
+        ]
+      },
+      "task2": {
+        "paraphrasesInOrder": [
+          "Sarah made a cake especially for her friend’s birthday.",
+          "She added candles and bright icing to decorate it.",
+          "The people at the party ate the cake together with joy."
+        ]
+      }
+    }
+  ]
+}

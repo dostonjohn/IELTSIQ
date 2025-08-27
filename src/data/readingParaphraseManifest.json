@@ -1,0 +1,468 @@
+{
+  "meta": {
+    "title": "Reading Paraphrase",
+    "version": "0.2",
+    "modes": [
+      "sentence",
+      "paragraph",
+      "passage"
+    ],
+    "notes": "Case-insensitive checks. Trim whitespace. Accept any of the listed answers."
+  },
+  "sentenceMode": [
+    {
+      "id": "s1",
+      "source": "The process was rapid.",
+      "tasks": {
+        "matchSynonyms": {
+          "highlight": [
+            "rapid"
+          ],
+          "options": [
+            "quick",
+            "fast",
+            "slow",
+            "careful"
+          ],
+          "answers": {
+            "rapid": [
+              "quick",
+              "fast",
+              "swift"
+            ]
+          }
+        },
+        "fillBlank": {
+          "stem": "The _____ was rapid.",
+          "accepted": [
+            "procedure",
+            "method",
+            "case",
+            "action"
+          ]
+        },
+        "identifyParaphrase": {
+          "question": "Which sentence best paraphrases the original?",
+          "options": [
+            "The process took an unusually long time.",
+            "The process happened quickly.",
+            "The process was dangerous."
+          ],
+          "answerIndex": 1
+        }
+      }
+    },
+    {
+      "id": "s2",
+      "source": "The study highlights a significant decline in bee populations.",
+      "tasks": {
+        "matchSynonyms": {
+          "highlight": [
+            "significant",
+            "decline"
+          ],
+          "options": [
+            "notable",
+            "minor",
+            "drop",
+            "increase",
+            "fall",
+            "considerable"
+          ],
+          "answers": {
+            "significant": [
+              "notable",
+              "considerable",
+              "substantial"
+            ],
+            "decline": [
+              "drop",
+              "decrease",
+              "fall"
+            ]
+          }
+        },
+        "fillBlank": {
+          "stem": "The study highlights a significant decline in bee _____.",
+          "accepted": [
+            "populations",
+            "community",
+            "colony",
+            "species"
+          ]
+        },
+        "identifyParaphrase": {
+          "question": "Choose the correct paraphrase.",
+          "options": [
+            "The study ignores changes in bee numbers.",
+            "The study shows that bee numbers have fallen a lot.",
+            "The study proves bees are extinct."
+          ],
+          "answerIndex": 1
+        }
+      }
+    },
+    {
+      "id": "s3",
+      "source": "Residents are urged to conserve water during the dry season.",
+      "tasks": {
+        "matchSynonyms": {
+          "highlight": [
+            "urged",
+            "conserve"
+          ],
+          "options": [
+            "encouraged",
+            "warned",
+            "save",
+            "waste",
+            "preserve"
+          ],
+          "answers": {
+            "urged": [
+              "encouraged",
+              "advised",
+              "pressed"
+            ],
+            "conserve": [
+              "save",
+              "preserve",
+              "use sparingly"
+            ]
+          }
+        },
+        "fillBlank": {
+          "stem": "_____ are urged to conserve water.",
+          "accepted": [
+            "people",
+            "locals",
+            "inhabitants"
+          ]
+        },
+        "identifyParaphrase": {
+          "question": "Pick the best paraphrase.",
+          "options": [
+            "Residents are told to increase water use.",
+            "Residents are recommended to use less water in the dry season.",
+            "Residents must pay a new water tax."
+          ],
+          "answerIndex": 1
+        }
+      }
+    }
+  ],
+  "paragraphMode": [
+    {
+      "id": "p1",
+      "paragraph": "Remote work has fundamentally reshaped daily life in many city centers. The once-bustling queues at lunchtime cafes have shortened, as fewer employees gather in office districts for midday meals. At the same time, co-working spaces have seen a steady stream of freelancers and small teams reserving desks, compensating for some of the decline in traditional office use. Property owners, faced with half-empty buildings, are exploring creative alternatives. Some have converted offices into community studios, classrooms for adult learners, or even indoor gardens that attract residents seeking quiet spaces within the city.",
+      "tasks": {
+        "tfng": [
+          {
+            "statement": "Fewer people are lining up at busy cafes at midday.",
+            "answer": "true",
+            "evidence": "once-bustling queues at lunchtime cafes have shortened"
+          },
+          {
+            "statement": "Co-working spaces are struggling to find clients.",
+            "answer": "false",
+            "evidence": "co-working spaces have seen a steady stream"
+          },
+          {
+            "statement": "Some empty offices may be repurposed.",
+            "answer": "true",
+            "evidence": "Some have converted offices into community studios"
+          },
+          {
+            "statement": "City centers have remained unchanged.",
+            "answer": "false",
+            "evidence": "has fundamentally reshaped daily life"
+          }
+        ],
+        "spotSynonym": [
+          {
+            "prompt": "Find a phrase similar to 'has changed'.",
+            "accepted": [
+              "has fundamentally reshaped",
+              "has reshaped"
+            ]
+          },
+          {
+            "prompt": "Find a phrase similar to 'considering new uses'.",
+            "accepted": [
+              "are exploring creative alternatives",
+              "exploring creative alternatives"
+            ]
+          }
+        ],
+        "matchSynonyms": {
+          "highlight": [
+            "queues",
+            "steady",
+            "decline",
+            "converted"
+          ],
+          "options": [
+            "lines",
+            "consistent",
+            "decrease",
+            "turned into",
+            "increase"
+          ],
+          "answers": {
+            "queues": [
+              "lines"
+            ],
+            "steady": [
+              "consistent",
+              "regular"
+            ],
+            "decline": [
+              "decrease",
+              "drop",
+              "fall"
+            ],
+            "converted": [
+              "turned into",
+              "transformed"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "p2",
+      "paragraph": "The museum extended its opening hours to attract younger visitors, many of whom prefer evening activities. Workshops now combine art with live music, creating a relaxed atmosphere where people feel comfortable trying new techniques. The change has raised operational costs, but early results show higher ticket sales and livelier social media engagement. Some critics argue the museum risks becoming more of an entertainment venue, yet supporters say the events spark curiosity that carries over into daytime exhibitions.",
+      "tasks": {
+        "tfng": [
+          {
+            "statement": "The museum shortened its opening hours.",
+            "answer": "false",
+            "evidence": "extended its opening hours"
+          },
+          {
+            "statement": "Workshops are held in the evenings.",
+            "answer": "true",
+            "evidence": "prefer evening activities"
+          },
+          {
+            "statement": "The changes reduced expenses.",
+            "answer": "false",
+            "evidence": "has raised operational costs"
+          },
+          {
+            "statement": "The initiative improved attendance and online activity.",
+            "answer": "true",
+            "evidence": "higher ticket sales and livelier social media engagement"
+          }
+        ],
+        "spotSynonym": [
+          {
+            "prompt": "Which phrase means 'to draw in more people'?",
+            "accepted": [
+              "attract younger visitors",
+              "attract visitors"
+            ]
+          },
+          {
+            "prompt": "Which phrase is similar to 'a calmer setting'?",
+            "accepted": [
+              "a relaxed atmosphere",
+              "relaxed atmosphere"
+            ]
+          }
+        ],
+        "matchSynonyms": {
+          "highlight": [
+            "extended",
+            "engagement",
+            "critics"
+          ],
+          "options": [
+            "lengthened",
+            "participation",
+            "opponents",
+            "expenses"
+          ],
+          "answers": {
+            "extended": [
+              "lengthened"
+            ],
+            "engagement": [
+              "participation",
+              "interaction",
+              "involvement"
+            ],
+            "critics": [
+              "opponents"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "p3",
+      "paragraph": "As buses, trams, and metro lines adopt contactless payment, commuting has become faster for many riders. Transport agencies report fewer delays at turnstiles, while maintenance teams say machines break down less frequently. However, some elderly passengers worry about losing access if cash options disappear entirely. To address this, cities are testing hybrid systems that keep coin-based machines at central hubs while promoting cards and phones elsewhere.",
+      "tasks": {
+        "tfng": [
+          {
+            "statement": "Contactless systems have slowed public transport for most riders.",
+            "answer": "false",
+            "evidence": "commuting has become faster"
+          },
+          {
+            "statement": "There are concerns about excluding some passengers.",
+            "answer": "true",
+            "evidence": "some elderly passengers worry"
+          },
+          {
+            "statement": "Hybrid systems mix old and new payment methods.",
+            "answer": "true",
+            "evidence": "hybrid systems that keep coin-based machines"
+          }
+        ],
+        "spotSynonym": [
+          {
+            "prompt": "Find a phrase similar to 'adopt'.",
+            "accepted": [
+              "adopt",
+              "are adopting"
+            ]
+          },
+          {
+            "prompt": "Find a phrase similar to 'reduce malfunctions'.",
+            "accepted": [
+              "break down less frequently"
+            ]
+          }
+        ],
+        "matchSynonyms": {
+          "highlight": [
+            "commuting",
+            "delays",
+            "hybrid"
+          ],
+          "options": [
+            "traveling to work",
+            "holdups",
+            "mixed",
+            "single"
+          ],
+          "answers": {
+            "commuting": [
+              "traveling to work"
+            ],
+            "delays": [
+              "holdups",
+              "hold-ups",
+              "waits"
+            ],
+            "hybrid": [
+              "mixed",
+              "combination"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "passageMode": [
+    {
+      "id": "pa1",
+      "passage": [
+        "Urban gardening has grown in popularity as residents search for affordable produce and greener neighborhoods. Community plots allow neighbors to share tools, seeds, and knowledge, while rooftops host compact systems that recycle water. Although few believe these gardens can feed entire cities, participants say they build skills, resilience, and local pride.",
+        "A common criticism is that such projects benefit only a small circle of enthusiasts. Supporters counter that their real value lies in education: children learn how food is grown, adults reconnect with seasonal eating, and schools integrate science lessons outdoors. When droughts or supply shocks occur, communities with active gardens adapt more quickly, even if harvests remain modest."
+      ],
+      "tasks": {
+        "tfng": [
+          {
+            "statement": "People are turning to small-scale gardening to save money and improve their surroundings.",
+            "answer": "true"
+          },
+          {
+            "statement": "Rooftop gardens waste large amounts of water.",
+            "answer": "false"
+          }
+        ],
+        "spotSynonym": [
+          {
+            "prompt": "Which phrase means the same as 'becoming more common'?",
+            "accepted": [
+              "has grown in popularity",
+              "grown in popularity"
+            ]
+          }
+        ],
+        "identifyParaphrase": {
+          "question": "Choose the best paraphrase.",
+          "target": "The main benefit of these projects is not mass food production.",
+          "options": [
+            "The projects mainly aim to feed entire cities.",
+            "Their primary advantages are educational and social, not large-scale food output.",
+            "They provide no benefits beyond aesthetics."
+          ],
+          "answerIndex": 1
+        },
+        "fillBlank": {
+          "stem": "Community plots allow neighbors to share ____.",
+          "accepted": [
+            "tools, seeds, and knowledge",
+            "tools, seeds and knowledge",
+            "tools seeds and knowledge"
+          ]
+        }
+      }
+    },
+    {
+      "id": "pa2",
+      "passage": [
+        "As online lectures became widespread, universities faced a growing problem: students watched passively without asking questions. In response, some courses embed short polls and prompts every few minutes. Early evaluations indicate that these interruptions, while modestly slowing the lecture, improve recall and encourage participation.",
+        "Skeptics argue that constant interruptions break concentration, yet trials suggest a balanced approach works best. When interactive moments are brief and focused on key ideas, learners review concepts just in time to prevent confusion. This rhythm mirrors effective study habits: short checks, quick corrections, and steady progress over time."
+      ],
+      "tasks": {
+        "tfng": [
+          {
+            "statement": "Passive viewing during online lectures was identified as an issue.",
+            "answer": "true"
+          },
+          {
+            "statement": "Interactive prompts make lectures significantly faster.",
+            "answer": "false"
+          }
+        ],
+        "spotSynonym": [
+          {
+            "prompt": "Find a phrase similar to 'became common'.",
+            "accepted": [
+              "became widespread",
+              "widespread"
+            ]
+          },
+          {
+            "prompt": "Find a phrase similar to 'help memory'.",
+            "accepted": [
+              "improve recall",
+              "improves recall"
+            ]
+          }
+        ],
+        "identifyParaphrase": {
+          "question": "Which option matches the meaning?",
+          "target": "Small interruptions can make students engage more.",
+          "options": [
+            "Frequent breaks eliminate learning.",
+            "Minor pauses with activities increase student involvement.",
+            "Interruptions cause students to leave the class."
+          ],
+          "answerIndex": 1
+        },
+        "fillBlank": {
+          "stem": "Some courses embed short ____ every few minutes.",
+          "accepted": [
+            "polls and prompts",
+            "prompts and polls"
+          ]
+        }
+      }
+    }
+  ]
+}

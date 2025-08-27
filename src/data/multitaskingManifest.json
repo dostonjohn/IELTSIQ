@@ -1,0 +1,65 @@
+{
+  "sets": [
+    {
+      "id": "set-1",
+      "title": "City Errands",
+      "audio": "/multitasking/set-1.mp3",
+      "transcript": "You will hear a short monologue about planning errands in the city. Five details appear in order...",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "gap",
+          "display": "The first stop is the ____ office near the station.",
+          "answer": [
+            "post",
+            "post office",
+            "the post office"
+          ],
+          "cueTime": 6.0
+        },
+        {
+          "id": "q2",
+          "type": "short",
+          "display": "What time is the haircut booked for?",
+          "answer": [
+            "10:15",
+            "10.15",
+            "10 15",
+            "ten fifteen"
+          ],
+          "cueTime": 14.0
+        },
+        {
+          "id": "q3",
+          "type": "gap",
+          "display": "They will buy fresh ____ at the market.",
+          "answer": [
+            "bread"
+          ],
+          "cueTime": 24.0
+        },
+        {
+          "id": "q4",
+          "type": "short",
+          "display": "Which bus number do they take?",
+          "answer": [
+            "12",
+            "twelve"
+          ],
+          "cueTime": 34.0
+        },
+        {
+          "id": "q5",
+          "type": "tf",
+          "display": "They plan to meet Anna after lunch.",
+          "expected": "false",
+          "cueTime": 46.0
+        }
+      ]
+    }
+  ],
+  "defaults": {
+    "bufferMsStage2": 7000,
+    "bufferMsStage3": 5000
+  }
+}
